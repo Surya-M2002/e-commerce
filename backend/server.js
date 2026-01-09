@@ -165,7 +165,12 @@ app.get("/auth/google/callback", async (req, res) => {
       env.JWT_SECRET || "DEV_SECRET",
       { expiresIn: "7d" }
     );
-    res.json({ ok: true, token, profile });
+    const dest = env.FRONTEND_URL || "http://localhost:5173";
+    const url = new URL(dest);
+    url.searchParams.set("token", token);
+    url.searchParams.set("name", profile.name || "");
+    url.searchParams.set("email", profile.email || "");
+    return res.redirect(url.toString());
   } catch (e) {
     res.status(500).json({ error: "OAuth failed" });
   }

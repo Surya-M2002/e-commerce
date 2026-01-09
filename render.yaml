@@ -20,6 +20,6 @@ services:
       - key: GOOGLE_CALLBACK_URL
         value: https://ecommerce-backend.onrender.com/auth/google/callback
       - key: FRONTEND_URL
-        value: https://e-commerce-website055.netlify.app
+        value: https://e-commerce-brdq.onrender.com
       - key: CLOUDINARY_URL
         value: cloudinary://671361884816884:LfHrlFJtfwWb4MbFzBgYDJ2VeW4@djfh1ooz6
