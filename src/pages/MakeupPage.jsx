@@ -8,7 +8,7 @@ import PromoBanners from '../components/makeup/PromoBanners';
 import ProductModal from '../components/ProductModal';
 import useScrollToResults from '../hooks/useScrollToResults';
 import { includesMatch } from '../utils/search';
-import { loadDomainData } from '../utils/dataLoader';
+import API_URL from '../config';
 
 const MakeupPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   const [activeCat, setActiveCat] = useState(null);
@@ -43,9 +43,14 @@ const MakeupPage = ({ cart, updateCart, removeItem, onCheckout }) => {
 
   useEffect(() => {
     const load = async () => {
-      const data = await loadDomainData('makeup');
-      setCategories(Array.isArray(data.categories) ? data.categories : []);
-      setProducts(Array.isArray(data.products) ? data.products : []);
+      const [catsRes, prodRes] = await Promise.all([
+        fetch(`${API_URL}/categories?domain=makeup`),
+        fetch(`${API_URL}/products?domain=makeup`),
+      ]);
+      const cats = await catsRes.json();
+      const items = await prodRes.json();
+      setCategories(Array.isArray(cats) ? cats : []);
+      setProducts(Array.isArray(items) ? items : []);
     };
     load();
   }, []);

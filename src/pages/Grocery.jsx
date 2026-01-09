@@ -11,7 +11,7 @@ import PromoBanners from "../components/grocery/PromoBanners";
 import CategoryBar from "../components/grocery/CategoryBar";
 import useScrollToResults from "../hooks/useScrollToResults";
 import { includesMatch } from "../utils/search";
-import { loadDomainData } from "../utils/dataLoader";
+import API_URL from "../config";
 
 const Home = ({ cart, updateCart, removeItem, onCheckout, activeCategoryId, onSelectCategory, domain = "grocery" }) => {
 
@@ -53,9 +53,14 @@ const Home = ({ cart, updateCart, removeItem, onCheckout, activeCategoryId, onSe
 
   useEffect(() => {
     const load = async () => {
-      const data = await loadDomainData(domain);
-      setCategories(Array.isArray(data.categories) ? data.categories : []);
-      setProducts(Array.isArray(data.products) ? data.products : []);
+      const [catsRes, prodRes] = await Promise.all([
+        fetch(`${API_URL}/categories?domain=${domain}`),
+        fetch(`${API_URL}/products?domain=${domain}`),
+      ]);
+      const cats = await catsRes.json();
+      const items = await prodRes.json();
+      setCategories(Array.isArray(cats) ? cats : []);
+      setProducts(Array.isArray(items) ? items : []);
     };
     load();
   }, [domain]);

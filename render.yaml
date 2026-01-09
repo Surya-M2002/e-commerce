@@ -10,7 +10,7 @@ services:
     autoDeploy: true
     envVars:
       - key: MONGO_URI
-        value: mongodb+srv://surya:12345@cluster0.ss9fdyp.mongodb.net/
+        value: mongodb+srv://surya:12345@cluster0.ss9fdyp.mongodb.net/ecommerce
       - key: JWT_SECRET
         value: your_secret
       - key: GOOGLE_CLIENT_ID
