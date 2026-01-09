@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="products"></div>
+
+  <script>
+   
+
+    const container = document.getElementById('products');
+
+    PRODUCTS.forEach(p => {
+      const img = document.createElement('img');
+      img.src = p.img;
+      img.alt = p.name;
+      img.style = "width:150px;margin:5px;";
+      container.appendChild(img);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+  "categories": [
+    {
+      "id": "men",
+      "name": "Men"
+    },
+    {
+      "id": "women",
+      "name": "Women"
+    },
+    {
+      "id": "kids",
+      "name": "Kids"
+    },
+    {
+      "id": "footwear",
+      "name": "Footwear"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories"
+    }
+  ],
+  "products": [
+    {
+      "id": 5001,
+      "categoryId": "men",
+      "name": "Men T-Shirt",
+      "unit": "M size",
+      "price": 499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082596/uploads/fashions/Men_T-Shirt.jpg"
+    },
+    {
+      "id": 5006,
+      "categoryId": "men",
+      "name": "Casual Shirt",
+      "unit": "L size",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082566/uploads/fashions/Casual_Shirt.jpg"
+    },
+    {
+      "id": 5007,
+      "categoryId": "men",
+      "name": "Jeans",
+      "unit": "32",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082579/uploads/fashions/Jeans.jpg"
+    },
+    {
+      "id": 5008,
+      "categoryId": "men",
+      "name": "Hoodie",
+      "unit": "XL size",
+      "price": 1099,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082577/uploads/fashions/Hoodie.jpg"
+    },
+    {
+      "id": 5002,
+      "categoryId": "women",
+      "name": "Women Dress",
+      "unit": "S size",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082617/uploads/fashions/Women_Dress.jpg"
+    },
+    {
+      "id": 5010,
+      "categoryId": "women",
+      "name": "Top & Skirt",
+      "unit": "M size",
+      "price": 999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082613/uploads/fashions/Top___Skirt.jpg"
+    },
+    {
+      "id": 5011,
+      "categoryId": "women",
+      "name": "Kurti",
+      "unit": "L size",
+      "price": 799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082586/uploads/fashions/Kurti.jpg"
+    },
+    {
+      "id": 5012,
+      "categoryId": "women",
+      "name": "Jeans",
+      "unit": "32",
+      "price": 1199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082619/uploads/fashions/women_Jeans.jpg"
+    },
+    {
+      "id": 5003,
+      "categoryId": "kids",
+      "name": "Kids Hoodie",
+      "unit": "5-6Y",
+      "price": 599,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082585/uploads/fashions/Kids_Hoodie.jpg"
+    },
+    {
+      "id": 5014,
+      "categoryId": "kids",
+      "name": "T-Shirt",
+      "unit": "6-7Y",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082609/uploads/fashions/T-Shirt.jpg"
+    },
+    {
+      "id": 5016,
+      "categoryId": "kids",
+      "name": "Dress",
+      "unit": "6-7Y",
+      "price": 699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082571/uploads/fashions/Dress.jpg"
+    },
+    {
+      "id": 5017,
+      "categoryId": "kids",
+      "name": "Track Pants",
+      "unit": "5-6Y",
+      "price": 499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082615/uploads/fashions/Track_Pants.jpg"
+    },
+    {
+      "id": 5004,
+      "categoryId": "footwear",
+      "name": "Running Shoes",
+      "unit": "UK 9",
+      "price": 2499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082603/uploads/fashions/Running_Shoes.jpg"
+    },
+    {
+      "id": 5018,
+      "categoryId": "footwear",
+      "name": "Casual Sneakers",
+      "unit": "UK 8",
+      "price": 1999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082568/uploads/fashions/Casual_Sneakers.jpg"
+    },
+    {
+      "id": 5019,
+      "categoryId": "footwear",
+      "name": "Formal Shoes",
+      "unit": "UK 9",
+      "price": 2699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082575/uploads/fashions/Formal_Shoes.jpg"
+    },
+    {
+      "id": 5020,
+      "categoryId": "footwear",
+      "name": "Sandals",
+      "unit": "UK 8",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082606/uploads/fashions/Sandals.jpg"
+    },
+    {
+      "id": 5005,
+      "categoryId": "accessories",
+      "name": "Leather Belt",
+      "unit": "1 pc",
+      "price": 699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082588/uploads/fashions/Leather_Belt.jpg"
+    },
+    {
+      "id": 5022,
+      "categoryId": "accessories",
+      "name": "Sunglasses",
+      "unit": "1 pc",
+      "price": 1199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082608/uploads/fashions/Sunglasses.jpg"
+    },
+    {
+      "id": 5023,
+      "categoryId": "accessories",
+      "name": "Wrist Watch",
+      "unit": "1 pc",
+      "price": 2499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082621/uploads/fashions/Wrist_Watch.jpg"
+    },
+    {
+      "id": 5024,
+      "categoryId": "accessories",
+      "name": "Cap",
+      "unit": "1 pc",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082564/uploads/fashions/Cap.jpg"
+    }
+  ]
+}

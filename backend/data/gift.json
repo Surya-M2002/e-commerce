@@ -1,0 +1,170 @@
+{
+  "categories": [
+    {
+      "id": "toys",
+      "name": "Toys"
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers"
+    },
+    {
+      "id": "cards",
+      "name": "Cards"
+    },
+    {
+      "id": "chocolate",
+      "name": "Chocolate"
+    },
+    {
+      "id": "decor",
+      "name": "Decor"
+    }
+  ],
+  "products": [
+    {
+      "id": 2001,
+      "categoryId": "flowers",
+      "name": "Rose Bouquet",
+      "unit": "1 set",
+      "price": 699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410302/Tulip_Bunch_jfrx9u.jpg"
+    },
+    {
+      "id": 2002,
+      "categoryId": "flowers",
+      "name": "Tulip Bunch",
+      "unit": "1 set",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410294/Sunflower_Set_wguijp.jpg"
+    },
+    {
+      "id": 2003,
+      "categoryId": "flowers",
+      "name": "Lily Vase",
+      "unit": "1 pc",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410287/Rose_Bouquet_zxu5lw.jpg"
+    },
+    {
+      "id": 2004,
+      "categoryId": "flowers",
+      "name": "Sunflower Set",
+      "unit": "1 set",
+      "price": 599,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767409115/Lily_Vase_ya8pbl.jpg"
+    },
+    {
+      "id": 2005,
+      "categoryId": "flowers",
+      "name": "Orchid Pot",
+      "unit": "1 pc",
+      "price": 1499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767409086/dzmitry-shepeleu-fIdJqUncEb0-unsplash_nrdjme.jpg"
+    },
+    {
+      "id": 2011,
+      "categoryId": "chocolate",
+      "name": "Dark Chocolate Box",
+      "unit": "500g",
+      "price": 799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410302/Tulip_Bunch_jfrx9u.jpg"
+    },
+    {
+      "id": 2012,
+      "categoryId": "chocolate",
+      "name": "Milk Chocolate Pack",
+      "unit": "400g",
+      "price": 599,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410301/Truffle_Collection_c8pqjx.jpg"
+    },
+    {
+      "id": 2013,
+      "categoryId": "chocolate",
+      "name": "Assorted Chocolates",
+      "unit": "1 box",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410284/parth-natani-Ja08OFQrC6U-unsplash_r6dvwc.jpg"
+    },
+    {
+      "id": 2014,
+      "categoryId": "chocolate",
+      "name": "Truffle Collection",
+      "unit": "12 pcs",
+      "price": 1199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767409118/Milk_Chocolate_Pack_fmiy1f.jpg"
+    },
+    {
+      "id": 2021,
+      "categoryId": "toys",
+      "name": "Plush Teddy",
+      "unit": "1 pc",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767409117/lutz-stallknecht-mFlAlqY3mUM-unsplash_ehsbrr.jpg"
+    },
+    {
+      "id": 2022,
+      "categoryId": "toys",
+      "name": "Toy Car",
+      "unit": "1 pc",
+      "price": 349,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410306/Wall_Frame_zglcwp.jpg"
+    },
+    {
+      "id": 2031,
+      "categoryId": "cards",
+      "name": "Birthday Cards",
+      "unit": "10 pcs",
+      "price": 299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410304/vika-fleysher-dSD54LIjWqM-unsplash_wnahji.jpg"
+    },
+    {
+      "id": 2032,
+      "categoryId": "cards",
+      "name": "Anniversary Cards",
+      "unit": "8 pcs",
+      "price": 279,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410297/Thank_You_Cards_yeu64d.jpg"
+    },
+    {
+      "id": 2033,
+      "categoryId": "cards",
+      "name": "Thank You Cards",
+      "unit": "12 pcs",
+      "price": 249,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767409091/Greeting_Cards_vfdfv6.jpg"
+    },
+    {
+      "id": 2034,
+      "categoryId": "cards",
+      "name": "Greeting Cards",
+      "unit": "10 pcs",
+      "price": 319,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767409086/ekaterina-shevchenko-ZLTlHeKbh04-unsplash_xetsex.jpg"
+    },
+    {
+      "id": 2035,
+      "categoryId": "cards",
+      "name": "Festival Cards",
+      "unit": "6 pcs",
+      "price": 199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767409089/Festival_Cards_p7vrvc.jpg"
+    },
+    {
+      "id": 2041,
+      "categoryId": "decor",
+      "name": "Scented Candle",
+      "unit": "1 pc",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767409086/Dark_Chocolate_Box_p38q1q.jpg"
+    },
+    {
+      "id": 2042,
+      "categoryId": "decor",
+      "name": "Wall Frame",
+      "unit": "1 pc",
+      "price": 999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767410306/Wall_Frame_zglcwp.jpg"
+    }
+  ]
+}

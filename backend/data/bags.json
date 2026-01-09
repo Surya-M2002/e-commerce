@@ -1,0 +1,66 @@
+{
+  "categories": [
+    {
+      "id": "handbag",
+      "name": "Handbags"
+    },
+    {
+      "id": "backpack",
+      "name": "Backpacks"
+    },
+    {
+      "id": "wallet",
+      "name": "Wallets"
+    },
+    {
+      "id": "travel",
+      "name": "Travel"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories"
+    }
+  ],
+  "products": [
+    {
+      "id": 8001,
+      "categoryId": "handbag",
+      "name": "Leather Handbag",
+      "unit": "1 pc",
+      "price": 3499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082239/uploads/bags/american-green-travel-166umbWL6Ec-unsplash.jpg"
+    },
+    {
+      "id": 8002,
+      "categoryId": "backpack",
+      "name": "Canvas Backpack",
+      "unit": "1 pc",
+      "price": 2499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082265/uploads/bags/mobina-ghazazani-lnbuoKz2GlM-unsplash.jpg"
+    },
+    {
+      "id": 8003,
+      "categoryId": "wallet",
+      "name": "Slim Wallet",
+      "unit": "1 pc",
+      "price": 999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082246/uploads/bags/emil-kalibradov-8WO2s6Yr0Ok-unsplash.jpg"
+    },
+    {
+      "id": 8004,
+      "categoryId": "travel",
+      "name": "Travel Suitcase",
+      "unit": "1 pc",
+      "price": 7999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082261/uploads/bags/josiah-weiss-8sjBzL1IyMo-unsplash.jpg"
+    },
+    {
+      "id": 8005,
+      "categoryId": "accessories",
+      "name": "Bag Organizer",
+      "unit": "1 pc",
+      "price": 599,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082275/uploads/bags/with-mahdy-s0dKoyfaqtw-unsplash.jpg"
+    }
+  ]
+}

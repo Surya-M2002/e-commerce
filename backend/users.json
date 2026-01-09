@@ -1,0 +1,49 @@
+[
+  {
+    "name": "demo",
+    "email": "customer@demo.com",
+    "password": "$2b$10$/GRt3vIYS.UhvJFRPu.GdO1BzgnfLGFQtzSu0SXANcYofz8PrrW/C",
+    "_id": "1767012864251",
+    "phone": "9999999999",
+    "address": "Salem",
+    "addresses": [
+      "vethaipannai"
+    ],
+    "newsletter": false
+  },
+  {
+    "name": "surya M",
+    "email": "ceecsurya.m2025@gmail.com",
+    "password": "$2b$10$vm3hUeKlRpSKlwjtLzErN.Z84tTmUJfhr1B2LXLiG3vgCc6iKkPjm",
+    "_id": "1767154946074",
+    "phone": "9876543210",
+    "address": "Coimbatore, Tamil Nadu",
+    "addresses": [
+      "123, Gandhipuram, Coimbatore – 641012, Tamil Nadu"
+    ],
+    "newsletter": true
+  },
+  {
+    "name": "Test User",
+    "email": "test1767170936686@demo.local",
+    "password": "$2b$10$7h9wpGbSW4NIjPM7NizEHua4nZlgipqSWEtJt0pbmJw1WXXZxtt8C",
+    "_id": "1767170936917"
+  },
+  {
+    "name": "Alice",
+    "email": "alice1767406694754@demo.local",
+    "password": "$2b$10$Ot2wKvxKw6O.qotUV2uVAeZttFxmGZ6BjahMUla0PYEo7rA4IORBe",
+    "_id": "1767406694893"
+  },
+  {
+    "name": "surya",
+    "email": "lovelysurya8055@gmail.com",
+    "password": "$2b$10$E.SpvCjmlMc7jmh1LBMhM.h/Y/xWbLovfmnIUsgqjcBdD7bzy5AU.",
+    "_id": "1767437517032",
+    "addresses": [
+      "No. 12, Cherry Road, Salem – 636001, Tamil Nadu",
+      "123, Gandhipuram, Coimbatore – 641012, Tamil Nadu"
+    ],
+    "address": "No. 12, Cherry Road, Salem – 636001, Tamil Nadu"
+  }
+]

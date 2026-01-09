@@ -1,0 +1,528 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Fruits & Vegetables",
+      "icon": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "Meat & Fish",
+      "icon": "Utensils"
+    },
+    {
+      "id": 3,
+      "name": "Snacks",
+      "icon": "Coffee"
+    },
+    {
+      "id": 4,
+      "name": "Pet Care",
+      "icon": "Dog"
+    },
+    {
+      "id": 5,
+      "name": "Home & Cleaning",
+      "icon": "Home"
+    },
+    {
+      "id": 6,
+      "name": "Dairy",
+      "icon": "Droplets"
+    },
+    {
+      "id": 7,
+      "name": "Cooking",
+      "icon": "Egg"
+    },
+    {
+      "id": 8,
+      "name": "Breakfast",
+      "icon": "Croissant"
+    },
+    {
+      "id": 9,
+      "name": "Beverage",
+      "icon": "Wine"
+    },
+    {
+      "id": 10,
+      "name": "Health & Beauty",
+      "icon": "Heart"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Apples",
+      "unit": "500g",
+      "price": 120,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082730/uploads/products/Apples.jpg"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Spinach",
+      "unit": "1 bunch",
+      "price": 30,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082866/uploads/products/Spinach.jpg"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "Broccoli",
+      "unit": "500g",
+      "price": 90,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082732/uploads/products/Broccoli.jpg"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "name": "Carrots",
+      "unit": "1kg",
+      "price": 50,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082737/uploads/products/Carrots.jpg"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "name": "Cucumber",
+      "unit": "500g",
+      "price": 35,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082753/uploads/products/Cucumber.jpg"
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "name": "Tomato",
+      "unit": "500g",
+      "price": 40,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082872/uploads/products/Tomato.jpg"
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "name": "Potato",
+      "unit": "1kg",
+      "price": 45,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082831/uploads/products/Potato.jpg"
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "name": "Onion",
+      "unit": "1kg",
+      "price": 55,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082782/uploads/products/Onion.jpg"
+    },
+    {
+      "id": 9,
+      "categoryId": 1,
+      "name": "Sweet Corn",
+      "unit": "500g",
+      "price": 60,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082870/uploads/products/Sweet_Corn.jpg"
+    },
+    {
+      "id": 10,
+      "categoryId": 1,
+      "name": "Brussels Sprout",
+      "unit": "500g",
+      "price": 110,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082733/uploads/products/Brussels_Sprout.jpg"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "name": "Salmon Fillet",
+      "unit": "500g",
+      "price": 1200,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082840/uploads/products/Salmon_Fillet.jpg"
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "name": "Cod Fillet",
+      "unit": "500g",
+      "price": 650,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082750/uploads/products/Cod_Fillet.jpg"
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "name": "Beef Steak",
+      "unit": "500g",
+      "price": 700,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082731/uploads/products/Beef_Steak.jpg"
+    },
+    {
+      "id": 14,
+      "categoryId": 2,
+      "name": "Chicken Breast",
+      "unit": "1kg",
+      "price": 280,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082744/uploads/products/Chicken_Breast.jpg"
+    },
+    {
+      "id": 15,
+      "categoryId": 2,
+      "name": "Lamb Chops",
+      "unit": "500g",
+      "price": 850,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082771/uploads/products/Lamb_Chops.jpg"
+    },
+    {
+      "id": 16,
+      "categoryId": 2,
+      "name": "Shrimp",
+      "unit": "500g",
+      "price": 600,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082863/uploads/products/Shrimp.jpg"
+    },
+    {
+      "id": 21,
+      "categoryId": 3,
+      "name": "Potato Chips",
+      "unit": "200g",
+      "price": 60,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082821/uploads/products/Potato_Chips.jpg"
+    },
+    {
+      "id": 22,
+      "categoryId": 3,
+      "name": "Chocolate Cookies",
+      "unit": "300g",
+      "price": 120,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082747/uploads/products/Chocolate_Cookies.jpg"
+    },
+    {
+      "id": 23,
+      "categoryId": 3,
+      "name": "Salted Nuts",
+      "unit": "250g",
+      "price": 220,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082844/uploads/products/Salted_Nuts.jpg"
+    },
+    {
+      "id": 25,
+      "categoryId": 3,
+      "name": "Granola Bar",
+      "unit": "6 pcs",
+      "price": 180,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082768/uploads/products/Granola_Bar.png"
+    },
+    {
+      "id": 26,
+      "categoryId": 3,
+      "name": "Pretzels",
+      "unit": "200g",
+      "price": 95,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082835/uploads/products/Pretzels.jpg"
+    },
+    {
+      "id": 27,
+      "categoryId": 3,
+      "name": "Cheese Crackers",
+      "unit": "250g",
+      "price": 110,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082741/uploads/products/Cheese_Crackers.png"
+    },
+    {
+      "id": 28,
+      "categoryId": 3,
+      "name": "Energy Bites",
+      "unit": "10 pcs",
+      "price": 250,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082761/uploads/products/Energy_Bites.jpg"
+    },
+    {
+      "id": 31,
+      "categoryId": 4,
+      "name": "Dog Food",
+      "unit": "5kg",
+      "price": 1400,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082756/uploads/products/Dog_Food.jpg"
+    },
+    {
+      "id": 32,
+      "categoryId": 4,
+      "name": "Cat Food",
+      "unit": "3kg",
+      "price": 1200,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082739/uploads/products/Cat_Food.jpg"
+    },
+    {
+      "id": 33,
+      "categoryId": 4,
+      "name": "Pet Shampoo",
+      "unit": "500ml",
+      "price": 350,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082787/uploads/products/Pet_Shampoo.png"
+    },
+    {
+      "id": 34,
+      "categoryId": 4,
+      "name": "Dog Toy",
+      "unit": "1 pc",
+      "price": 300,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082757/uploads/products/Dog_Toy.jpg"
+    },
+    {
+      "id": 35,
+      "categoryId": 4,
+      "name": "Cat Litter",
+      "unit": "10kg",
+      "price": 900,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082740/uploads/products/Cat_Litter.jpg"
+    },
+    {
+      "id": 41,
+      "categoryId": 5,
+      "name": "Laundry Detergent",
+      "unit": "2L",
+      "price": 420,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082772/uploads/products/Laundry_Detergent.png"
+    },
+    {
+      "id": 43,
+      "categoryId": 5,
+      "name": "Floor Cleaner",
+      "unit": "2L",
+      "price": 280,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082764/uploads/products/Floor_Cleaner.png"
+    },
+    {
+      "id": 44,
+      "categoryId": 5,
+      "name": "Glass Cleaner",
+      "unit": "500ml",
+      "price": 160,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082766/uploads/products/Glass_Cleaner.png"
+    },
+    {
+      "id": 45,
+      "categoryId": 5,
+      "name": "Paper Towels",
+      "unit": "6 rolls",
+      "price": 240,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082785/uploads/products/Paper_Towels.png"
+    },
+    {
+      "id": 46,
+      "categoryId": 5,
+      "name": "Trash Bags",
+      "unit": "30 pcs",
+      "price": 190,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082877/uploads/products/Trash_Bags.png"
+    },
+    {
+      "id": 47,
+      "categoryId": 5,
+      "name": "Sponge Pack",
+      "unit": "5 pcs",
+      "price": 120,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082867/uploads/products/Sponge_Pack.png"
+    },
+    {
+      "id": 48,
+      "categoryId": 5,
+      "name": "Toilet Cleaner",
+      "unit": "750ml",
+      "price": 180,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082871/uploads/products/Toilet_Cleaner.png"
+    },
+    {
+      "id": 51,
+      "categoryId": 6,
+      "name": "Milk",
+      "unit": "1L",
+      "price": 60,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082776/uploads/products/milk.png"
+    },
+    {
+      "id": 52,
+      "categoryId": 6,
+      "name": "Cheese",
+      "unit": "500g",
+      "price": 260,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082743/uploads/products/cheese.png"
+    },
+    {
+      "id": 53,
+      "categoryId": 6,
+      "name": "Butter",
+      "unit": "250g",
+      "price": 140,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082735/uploads/products/Butter.png"
+    },
+    {
+      "id": 54,
+      "categoryId": 6,
+      "name": "Yogurt",
+      "unit": "500g",
+      "price": 75,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082879/uploads/products/Yogurt.png"
+    },
+    {
+      "id": 55,
+      "categoryId": 6,
+      "name": "Cream",
+      "unit": "250ml",
+      "price": 90,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082751/uploads/products/Cream.png"
+    },
+    {
+      "id": 56,
+      "categoryId": 6,
+      "name": "Paneer",
+      "unit": "500g",
+      "price": 240,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082784/uploads/products/Paneer.png"
+    },
+    {
+      "id": 61,
+      "categoryId": 7,
+      "name": "Olive Oil",
+      "unit": "1L",
+      "price": 850,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082781/uploads/products/olive_oil.png"
+    },
+    {
+      "id": 62,
+      "categoryId": 7,
+      "name": "Sunflower Oil",
+      "unit": "1L",
+      "price": 160,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082869/uploads/products/Sunflower_Oil.png"
+    },
+    {
+      "id": 63,
+      "categoryId": 7,
+      "name": "Salt",
+      "unit": "1kg",
+      "price": 25,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082842/uploads/products/salt.png"
+    },
+    {
+      "id": 64,
+      "categoryId": 7,
+      "name": "Sugar",
+      "unit": "2kg",
+      "price": 90,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082868/uploads/products/Sugar.png"
+    },
+    {
+      "id": 65,
+      "categoryId": 7,
+      "name": "Flour",
+      "unit": "5kg",
+      "price": 220,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082765/uploads/products/flour.png"
+    },
+    {
+      "id": 66,
+      "categoryId": 7,
+      "name": "Rice",
+      "unit": "5kg",
+      "price": 320,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082836/uploads/products/rice.png"
+    },
+    {
+      "id": 71,
+      "categoryId": 8,
+      "name": "Chips",
+      "unit": "500g",
+      "price": 150,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082745/uploads/products/Chips.jpg"
+    },
+    {
+      "id": 72,
+      "categoryId": 8,
+      "name": "Popcorn",
+      "unit": "1kg",
+      "price": 180,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082820/uploads/products/popcorn.jpg"
+    },
+    {
+      "id": 81,
+      "categoryId": 9,
+      "name": "Orange Juice",
+      "unit": "1L",
+      "price": 120,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082783/uploads/products/Orange_Juice.png"
+    },
+    {
+      "id": 82,
+      "categoryId": 9,
+      "name": "Apple Juice",
+      "unit": "1L",
+      "price": 125,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082728/uploads/products/Apple_Juice.png"
+    },
+    {
+      "id": 87,
+      "categoryId": 9,
+      "name": "Smoothie",
+      "unit": "250ml",
+      "price": 180,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082864/uploads/products/Smoothie.png"
+    },
+    {
+      "id": 88,
+      "categoryId": 9,
+      "name": "Coconut Water",
+      "unit": "500ml",
+      "price": 65,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082748/uploads/products/Coconut_Water.png"
+    },
+    {
+      "id": 89,
+      "categoryId": 9,
+      "name": "Energy Drink",
+      "unit": "250ml",
+      "price": 110,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082762/uploads/products/Energy_Drink.png"
+    },
+    {
+      "id": 91,
+      "categoryId": 10,
+      "name": "Toothpaste",
+      "unit": "150g",
+      "price": 110,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082875/uploads/products/Toothpaste.png"
+    },
+    {
+      "id": 92,
+      "categoryId": 10,
+      "name": "Toothbrush",
+      "unit": "1 pc",
+      "price": 80,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082873/uploads/products/Toothbrush.png"
+    },
+    {
+      "id": 93,
+      "categoryId": 10,
+      "name": "Deodorant",
+      "unit": "150ml",
+      "price": 220,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082754/uploads/products/Deodorant.png"
+    },
+    {
+      "id": 94,
+      "categoryId": 10,
+      "name": "Hand Cream",
+      "unit": "50ml",
+      "price": 180,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082769/uploads/products/Hand_Cream.png"
+    },
+    {
+      "id": 95,
+      "categoryId": 10,
+      "name": "Shaving Gel",
+      "unit": "200ml",
+      "price": 210,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082862/uploads/products/Shaving_Gel.png"
+    }
+  ]
+}

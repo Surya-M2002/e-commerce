@@ -1,0 +1,195 @@
+{
+  "categories": [
+    {
+      "id": "living",
+      "name": "Living Room"
+    },
+    {
+      "id": "bedroom",
+      "name": "Bedroom"
+    },
+    {
+      "id": "office",
+      "name": "Office"
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen"
+    },
+    {
+      "id": "decor",
+      "name": "Decor"
+    }
+  ],
+  "products": [
+    {
+      "id": 6001,
+      "categoryId": "living",
+      "name": "Sofa",
+      "unit": "3-seater",
+      "price": 24999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082658/uploads/furnitures/Sofa.jpg"
+    },
+    {
+      "id": 6006,
+      "categoryId": "living",
+      "name": "Recliner Chair",
+      "unit": "1 pc",
+      "price": 15999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082655/uploads/furnitures/Recliner_Chair.jpg"
+    },
+    {
+      "id": 6007,
+      "categoryId": "living",
+      "name": "Coffee Table",
+      "unit": "1 pc",
+      "price": 4999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082628/uploads/furnitures/Coffee_Table.jpg"
+    },
+    {
+      "id": 6008,
+      "categoryId": "living",
+      "name": "TV Unit",
+      "unit": "1 pc",
+      "price": 8999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082662/uploads/furnitures/TV_Unit.jpg"
+    },
+    {
+      "id": 6009,
+      "categoryId": "living",
+      "name": "Armchair",
+      "unit": "1 pc",
+      "price": 6999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082622/uploads/furnitures/Armchair.jpg"
+    },
+    {
+      "id": 6002,
+      "categoryId": "bedroom",
+      "name": "Queen Bed",
+      "unit": "1 pc",
+      "price": 29999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082653/uploads/furnitures/Queen_Bed.jpg"
+    },
+    {
+      "id": 6010,
+      "categoryId": "bedroom",
+      "name": "King Bed",
+      "unit": "1 pc",
+      "price": 34999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082640/uploads/furnitures/King_Bed.png"
+    },
+    {
+      "id": 6011,
+      "categoryId": "bedroom",
+      "name": "Wardrobe",
+      "unit": "3-door",
+      "price": 21999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082667/uploads/furnitures/Wardrobe.png"
+    },
+    {
+      "id": 6012,
+      "categoryId": "bedroom",
+      "name": "Bedside Table",
+      "unit": "1 pc",
+      "price": 4999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082625/uploads/furnitures/Bedside_Table.png"
+    },
+    {
+      "id": 6013,
+      "categoryId": "bedroom",
+      "name": "Dresser",
+      "unit": "1 pc",
+      "price": 10999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082631/uploads/furnitures/Dresser.png"
+    },
+    {
+      "id": 6003,
+      "categoryId": "office",
+      "name": "Office Chair",
+      "unit": "1 pc",
+      "price": 8999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082648/uploads/furnitures/Office_Chair.jpg"
+    },
+    {
+      "id": 6014,
+      "categoryId": "office",
+      "name": "Office Desk",
+      "unit": "1 pc",
+      "price": 11999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082649/uploads/furnitures/Office_Desk.jpg"
+    },
+    {
+      "id": 6015,
+      "categoryId": "office",
+      "name": "Filing Cabinet",
+      "unit": "1 pc",
+      "price": 6999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082635/uploads/furnitures/Filing_Cabinet.jpg"
+    },
+    {
+      "id": 6016,
+      "categoryId": "office",
+      "name": "Bookshelf",
+      "unit": "1 pc",
+      "price": 8999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082627/uploads/furnitures/Bookshelf.jpg"
+    },
+    {
+      "id": 6017,
+      "categoryId": "office",
+      "name": "Ergonomic Chair",
+      "unit": "1 pc",
+      "price": 12999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082634/uploads/furnitures/Ergonomic_Chair.jpg"
+    },
+    {
+      "id": 6004,
+      "categoryId": "kitchen",
+      "name": "Dining Table",
+      "unit": "4 seats",
+      "price": 14999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082630/uploads/furnitures/Dining_Table.jpg"
+    },
+    {
+      "id": 6018,
+      "categoryId": "kitchen",
+      "name": "Kitchen Cabinet",
+      "unit": "1 pc",
+      "price": 11999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082642/uploads/furnitures/Kitchen_Cabinet.jpg"
+    },
+    {
+      "id": 6019,
+      "categoryId": "kitchen",
+      "name": "Bar Stool",
+      "unit": "1 pc",
+      "price": 3999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082624/uploads/furnitures/Bar_Stool.jpg"
+    },
+    {
+      "id": 6005,
+      "categoryId": "decor",
+      "name": "Wall Art",
+      "unit": "1 pc",
+      "price": 1999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082664/uploads/furnitures/Wall_Art.jpg"
+    },
+    
+    {
+      "id": 6024,
+      "categoryId": "decor",
+      "name": "Wall Clock",
+      "unit": "1 pc",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082665/uploads/furnitures/Wall_Clock.jpg"
+    },
+    {
+      "id": 6025,
+      "categoryId": "decor",
+      "name": "Photo Frame",
+      "unit": "1 pc",
+      "price": 799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082651/uploads/furnitures/Photo_Frame.jpg"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "categories": [
+    {
+      "id": "tops",
+      "name": "Tops"
+    },
+    {
+      "id": "bottoms",
+      "name": "Bottoms"
+    },
+    {
+      "id": "outerwear",
+      "name": "Outerwear"
+    },
+    {
+      "id": "footwear",
+      "name": "Footwear"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories"
+    }
+  ],
+  "products": [
+    {
+      "id": 7001,
+      "categoryId": "tops",
+      "name": "Cotton T-Shirt",
+      "unit": "M size",
+      "price": 499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082362/uploads/clothings/tshirt.jpg"
+    },
+    {
+      "id": 7006,
+      "categoryId": "tops",
+      "name": "Printed T-Shirt",
+      "unit": "L size",
+      "price": 599,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767407508/printed-T-Shirt_yb05vp.jpg"
+    },
+    {
+      "id": 7007,
+      "categoryId": "tops",
+      "name": "Casual Shirt",
+      "unit": "M size",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082319/uploads/clothings/casual_shirt.jpg"
+    },
+    {
+      "id": 7008,
+      "categoryId": "tops",
+      "name": "Formal Shirt",
+      "unit": "L size",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082329/uploads/clothings/formal_shirt.jpg"
+    },
+    {
+      "id": 7002,
+      "categoryId": "bottoms",
+      "name": "Slim Fit Jeans",
+      "unit": "32",
+      "price": 1499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082351/uploads/clothings/Slim_Fit_Jeans.jpg"
+    },
+    {
+      "id": 7010,
+      "categoryId": "bottoms",
+      "name": "Regular Jeans",
+      "unit": "34",
+      "price": 1399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082341/uploads/clothings/Regular_Jeans.jpg"
+    },
+    {
+      "id": 7011,
+      "categoryId": "bottoms",
+      "name": "Cotton Trousers",
+      "unit": "32",
+      "price": 1199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082325/uploads/clothings/Cotton_Trousers.jpg"
+    },
+    {
+      "id": 7012,
+      "categoryId": "bottoms",
+      "name": "Chinos",
+      "unit": "34",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082324/uploads/clothings/Chinos.jpg"
+    },
+    {
+      "id": 7013,
+      "categoryId": "bottoms",
+      "name": "Track Pants",
+      "unit": "L size",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082359/uploads/clothings/Track_Pants.jpg"
+    },
+    {
+      "id": 7003,
+      "categoryId": "outerwear",
+      "name": "Casual Jacket",
+      "unit": "L size",
+      "price": 2499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082317/uploads/clothings/Casual_Jacket.jpg"
+    },
+    {
+      "id": 7014,
+      "categoryId": "outerwear",
+      "name": "Denim Jacket",
+      "unit": "M size",
+      "price": 2799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082326/uploads/clothings/Denim_Jacket.jpg"
+    },
+    {
+      "id": 7015,
+      "categoryId": "outerwear",
+      "name": "Hoodie",
+      "unit": "XL size",
+      "price": 1799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082336/uploads/clothings/Hoodie.jpg"
+    },
+    {
+      "id": 7016,
+      "categoryId": "outerwear",
+      "name": "Sweatshirt",
+      "unit": "L size",
+      "price": 1599,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082357/uploads/clothings/Sweatshirt.jpg"
+    },
+    {
+      "id": 7017,
+      "categoryId": "outerwear",
+      "name": "Winter Coat",
+      "unit": "XL size",
+      "price": 3499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082367/uploads/clothings/Winter_Coat.jpg"
+    },
+    {
+      "id": 7004,
+      "categoryId": "footwear",
+      "name": "Casual Sneakers",
+      "unit": "UK 9",
+      "price": 2499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082322/uploads/clothings/Casual_Sneakers.jpg"
+    },
+    {
+      "id": 7018,
+      "categoryId": "footwear",
+      "name": "Running Shoes",
+      "unit": "UK 8",
+      "price": 2999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082345/uploads/clothings/Running_Shoes.jpg"
+    },
+    {
+      "id": 7019,
+      "categoryId": "footwear",
+      "name": "Formal Shoes",
+      "unit": "UK 9",
+      "price": 2699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082330/uploads/clothings/Formal_Shoes.jpg"
+    },
+    {
+      "id": 7020,
+      "categoryId": "footwear",
+      "name": "Sandals",
+      "unit": "UK 8",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082348/uploads/clothings/Sandals.jpg"
+    },
+    {
+      "id": 7005,
+      "categoryId": "accessories",
+      "name": "Cap",
+      "unit": "1 pc",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082314/uploads/clothings/cap.jpg"
+    },
+    {
+      "id": 7022,
+      "categoryId": "accessories",
+      "name": "Leather Belt",
+      "unit": "1 pc",
+      "price": 699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082337/uploads/clothings/Leather_Belt.jpg"
+    },
+    {
+      "id": 7023,
+      "categoryId": "accessories",
+      "name": "Sunglasses",
+      "unit": "1 pc",
+      "price": 1199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082354/uploads/clothings/Sunglasses.jpg"
+    },
+    {
+      "id": 7024,
+      "categoryId": "accessories",
+      "name": "Wallet",
+      "unit": "1 pc",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082365/uploads/clothings/Wallet.jpg"
+    },
+    {
+      "id": 7025,
+      "categoryId": "accessories",
+      "name": "Wrist Watch",
+      "unit": "1 pc",
+      "price": 2499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082369/uploads/clothings/Wrist_Watch.jpg"
+    }
+  ]
+}

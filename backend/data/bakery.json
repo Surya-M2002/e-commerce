@@ -1,0 +1,178 @@
+{
+  "categories": [
+    {
+      "id": "bread",
+      "name": "Bread"
+    },
+    {
+      "id": "cookies",
+      "name": "Cookies"
+    },
+    {
+      "id": "cakes",
+      "name": "Cakes & Pastries"
+    },
+    {
+      "id": "snacks",
+      "name": "Tea Time Snacks"
+    },
+    {
+      "id": "toasts",
+      "name": "Rusks & Toasts"
+    },
+    {
+      "id": "khari",
+      "name": "Khari & Puffs"
+    },
+    {
+      "id": "buns",
+      "name": "Buns & Rolls"
+    }
+  ],
+  "products": [
+    {
+      "id": 10001,
+      "categoryId": "bread",
+      "name": "Whole Wheat Bread",
+      "unit": "400g",
+      "price": 55,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082277/uploads/bakery/pexels-8pcarlos-morocho-2150734957-35260858-min.jpg"
+    },
+    {
+      "id": 10002,
+      "categoryId": "bread",
+      "name": "Multigrain Bread",
+      "unit": "400g",
+      "price": 65,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082280/uploads/bakery/pexels-anh-nguyen-517648218-30767590-min.jpg"
+    },
+    {
+      "id": 10003,
+      "categoryId": "bread",
+      "name": "White Bread",
+      "unit": "400g",
+      "price": 45,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082281/uploads/bakery/pexels-anh-nguyen-517648218-35286349-min.jpg"
+    },
+    {
+      "id": 10004,
+      "categoryId": "cookies",
+      "name": "Choco Chip Cookies",
+      "unit": "200g",
+      "price": 120,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082284/uploads/bakery/pexels-antonio-prado-1050855-3410631-min.jpg"
+    },
+    {
+      "id": 10005,
+      "categoryId": "cookies",
+      "name": "Oatmeal Cookies",
+      "unit": "200g",
+      "price": 110,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082287/uploads/bakery/pexels-berkant-12259559-min.jpg"
+    },
+    {
+      "id": 10006,
+      "categoryId": "cookies",
+      "name": "Butter Cookies",
+      "unit": "200g",
+      "price": 95,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082290/uploads/bakery/pexels-charlotte-may-5946690-min.jpg"
+    },
+    {
+      "id": 10007,
+      "categoryId": "cakes",
+      "name": "Chocolate Truffle",
+      "unit": "500g",
+      "price": 550,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082292/uploads/bakery/pexels-enzo-gabrielloni-1247172379-23369292-min.jpg"
+    },
+    {
+      "id": 10008,
+      "categoryId": "cakes",
+      "name": "Pineapple Pastry",
+      "unit": "1 pc",
+      "price": 80,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082295/uploads/bakery/pexels-erikanuor-10895588-min.jpg"
+    },
+    {
+      "id": 10009,
+      "categoryId": "cakes",
+      "name": "Red Velvet Cake",
+      "unit": "500g",
+      "price": 650,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082296/uploads/bakery/pexels-heyronmar-806363-min.jpg"
+    },
+    {
+      "id": 10010,
+      "categoryId": "snacks",
+      "name": "Veg Puff",
+      "unit": "1 pc",
+      "price": 30,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082298/uploads/bakery/pexels-pelageia-zelenina-58865108-10390468-min.jpg"
+    },
+    {
+      "id": 10011,
+      "categoryId": "snacks",
+      "name": "Cream Roll",
+      "unit": "1 pc",
+      "price": 25,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082300/uploads/bakery/pexels-photo-3026809-min.jpg"
+    },
+    {
+      "id": 10012,
+      "categoryId": "toasts",
+      "name": "Milk Rusk",
+      "unit": "300g",
+      "price": 85,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082301/uploads/bakery/pexels-pixabay-289368-min.jpg"
+    },
+    {
+      "id": 10013,
+      "categoryId": "toasts",
+      "name": "Cake Rusk",
+      "unit": "300g",
+      "price": 110,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082303/uploads/bakery/pexels-rdne-8963991-min.jpg"
+    },
+    {
+      "id": 10014,
+      "categoryId": "khari",
+      "name": "Butter Khari",
+      "unit": "200g",
+      "price": 70,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082304/uploads/bakery/pexels-rodrigo-ortega-2044210904-30478768-min.jpg"
+    },
+    {
+      "id": 10015,
+      "categoryId": "khari",
+      "name": "Jeera Khari",
+      "unit": "200g",
+      "price": 75,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082306/uploads/bakery/pexels-ryutaro-6249715-min.jpg"
+    },
+    {
+      "id": 10016,
+      "categoryId": "buns",
+      "name": "Burger Buns",
+      "unit": "4 pcs",
+      "price": 45,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082309/uploads/bakery/pexels-shaarannnnn-12365247-min.jpg"
+    },
+    {
+      "id": 10017,
+      "categoryId": "buns",
+      "name": "Pav Buns",
+      "unit": "6 pcs",
+      "price": 35,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082311/uploads/bakery/pexels-thrissurkaranphotography-12865863-min.jpg"
+    },
+    {
+      "id": 10018,
+      "categoryId": "buns",
+      "name": "Dinner Rolls",
+      "unit": "6 pcs",
+      "price": 50,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082312/uploads/bakery/pexels-wutthichai-charoenburi-553075115-19837526-min.jpg"
+    }
+  ]
+}

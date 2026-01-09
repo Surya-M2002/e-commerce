@@ -1,0 +1,338 @@
+{
+  "categories": [
+    {
+      "id": "fitness",
+      "name": "Fitness"
+    },
+    {
+      "id": "outdoor",
+      "name": "Outdoor"
+    },
+    {
+      "id": "cycling",
+      "name": "Cycling"
+    },
+    {
+      "id": "ball",
+      "name": "Ball Sports"
+    },
+    {
+      "id": "wear",
+      "name": "Wear"
+    }
+  ],
+  "products": [
+    {
+      "id": 3001,
+      "categoryId": "fitness",
+      "name": "Yoga Mat",
+      "unit": "1 pc",
+      "price": 799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082938/uploads/sports/Yoga_Mat.png"
+    },
+    {
+      "id": 3002,
+      "categoryId": "fitness",
+      "name": "Dumbbell Set",
+      "unit": "1 set",
+      "price": 2999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082896/uploads/sports/Dumbbell_Set.png"
+    },
+    {
+      "id": 3003,
+      "categoryId": "fitness",
+      "name": "Resistance Bands",
+      "unit": "1 set",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082907/uploads/sports/Resistance_Bands.png"
+    },
+    {
+      "id": 3004,
+      "categoryId": "fitness",
+      "name": "Kettlebell",
+      "unit": "1 pc",
+      "price": 1799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082901/uploads/sports/Kettlebell.png"
+    },
+    {
+      "id": 3005,
+      "categoryId": "fitness",
+      "name": "Skipping Rope",
+      "unit": "1 pc",
+      "price": 349,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082920/uploads/sports/Skipping_Rope.png"
+    },
+    {
+      "id": 3006,
+      "categoryId": "fitness",
+      "name": "Foam Roller",
+      "unit": "1 pc",
+      "price": 999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082897/uploads/sports/Foam_Roller.png"
+    },
+    {
+      "id": 3007,
+      "categoryId": "fitness",
+      "name": "Push-up Bars",
+      "unit": "1 pair",
+      "price": 599,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082906/uploads/sports/Push-up_Bars.png"
+    },
+    {
+      "id": 3008,
+      "categoryId": "fitness",
+      "name": "Workout Gloves",
+      "unit": "1 pair",
+      "price": 699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082937/uploads/sports/Workout_Gloves.png"
+    },
+    {
+      "id": 3009,
+      "categoryId": "fitness",
+      "name": "Medicine Ball",
+      "unit": "1 pc",
+      "price": 1999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082902/uploads/sports/Medicine_Ball.png"
+    },
+    {
+      "id": 3011,
+      "categoryId": "outdoor",
+      "name": "Camping Lantern",
+      "unit": "1 pc",
+      "price": 1199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082888/uploads/sports/Camping_Lantern.png"
+    },
+    {
+      "id": 3012,
+      "categoryId": "outdoor",
+      "name": "Sleeping Bag",
+      "unit": "1 pc",
+      "price": 2499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082921/uploads/sports/Sleeping_Bag.png"
+    },
+    {
+      "id": 3013,
+      "categoryId": "outdoor",
+      "name": "Hiking Backpack",
+      "unit": "1 pc",
+      "price": 3499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082900/uploads/sports/Hiking_Backpack.png"
+    },
+    {
+      "id": 3014,
+      "categoryId": "outdoor",
+      "name": "Camping Tent",
+      "unit": "1 pc",
+      "price": 5999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082889/uploads/sports/camping_tent.png"
+    },
+    {
+      "id": 3015,
+      "categoryId": "outdoor",
+      "name": "Portable Stove",
+      "unit": "1 pc",
+      "price": 1999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082905/uploads/sports/Portable_Stove.png"
+    },
+    {
+      "id": 3016,
+      "categoryId": "outdoor",
+      "name": "Thermal Flask",
+      "unit": "1 pc",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082931/uploads/sports/Thermal_Flask.png"
+    },
+    {
+      "id": 3017,
+      "categoryId": "outdoor",
+      "name": "Compass",
+      "unit": "1 pc",
+      "price": 299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082891/uploads/sports/Compass.png"
+    },
+    {
+      "id": 3018,
+      "categoryId": "outdoor",
+      "name": "Camping Chair",
+      "unit": "1 pc",
+      "price": 1799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082888/uploads/sports/Camping_Chair.png"
+    },
+    {
+      "id": 3021,
+      "categoryId": "cycling",
+      "name": "Cycling Helmet",
+      "unit": "1 pc",
+      "price": 1499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082893/uploads/sports/Cycling_Helmet.png"
+    },
+    {
+      "id": 3022,
+      "categoryId": "cycling",
+      "name": "Mountain Cycle",
+      "unit": "1 pc",
+      "price": 14999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082903/uploads/sports/Mountain_Cycle.png"
+    },
+    {
+      "id": 3023,
+      "categoryId": "cycling",
+      "name": "Bike Gloves",
+      "unit": "1 pair",
+      "price": 599,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082884/uploads/sports/Bike_Gloves.png"
+    },
+    {
+      "id": 3024,
+      "categoryId": "cycling",
+      "name": "Cycling Jersey",
+      "unit": "1 pc",
+      "price": 1299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082894/uploads/sports/Cycling_Jersey.png"
+    },
+    {
+      "id": 3025,
+      "categoryId": "cycling",
+      "name": "Bike Lock",
+      "unit": "1 pc",
+      "price": 799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082885/uploads/sports/Bike_Lock.png"
+    },
+    {
+      "id": 3026,
+      "categoryId": "cycling",
+      "name": "Water Bottle Cage",
+      "unit": "1 pc",
+      "price": 349,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082935/uploads/sports/Water_Bottle_Cage.png"
+    },
+    {
+      "id": 3027,
+      "categoryId": "cycling",
+      "name": "Bike Pump",
+      "unit": "1 pc",
+      "price": 699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082886/uploads/sports/Bike_Pump.png"
+    },
+    {
+      "id": 3031,
+      "categoryId": "ball",
+      "name": "Football",
+      "unit": "1 pc",
+      "price": 899,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082898/uploads/sports/Football.png"
+    },
+    {
+      "id": 3032,
+      "categoryId": "ball",
+      "name": "Cricket Bat",
+      "unit": "1 pc",
+      "price": 2499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082892/uploads/sports/cricket_Bat.png"
+    },
+    {
+      "id": 3033,
+      "categoryId": "ball",
+      "name": "Basketball",
+      "unit": "1 pc",
+      "price": 1199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082883/uploads/sports/Basketball.png"
+    },
+    {
+      "id": 3034,
+      "categoryId": "ball",
+      "name": "Tennis Ball Pack",
+      "unit": "3 pcs",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082930/uploads/sports/tennis_ball_pack.png"
+    },
+    {
+      "id": 3035,
+      "categoryId": "ball",
+      "name": "Badminton Shuttle",
+      "unit": "6 pcs",
+      "price": 499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082882/uploads/sports/Badminton_Shuttle.png"
+    },
+    {
+      "id": 3036,
+      "categoryId": "ball",
+      "name": "Volleyball",
+      "unit": "1 pc",
+      "price": 999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082935/uploads/sports/Volleyball.png"
+    },
+    {
+      "id": 3037,
+      "categoryId": "ball",
+      "name": "Table Tennis Bat",
+      "unit": "1 pc",
+      "price": 799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082928/uploads/sports/table_tennis_bat.png"
+    },
+    {
+      "id": 3041,
+      "categoryId": "wear",
+      "name": "Running T-Shirt",
+      "unit": "1 pc",
+      "price": 699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082908/uploads/sports/Running_T-Shirt.png"
+    },
+    {
+      "id": 3042,
+      "categoryId": "wear",
+      "name": "Sports Shorts",
+      "unit": "1 pc",
+      "price": 799,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082925/uploads/sports/Sports_Shorts.png"
+    },
+    {
+      "id": 3043,
+      "categoryId": "wear",
+      "name": "Track Pants",
+      "unit": "1 pc",
+      "price": 1199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082933/uploads/sports/Track_Pants.png"
+    },
+    {
+      "id": 3044,
+      "categoryId": "wear",
+      "name": "Training Jacket",
+      "unit": "1 pc",
+      "price": 1999,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082934/uploads/sports/training_Jacket.png"
+    },
+    {
+      "id": 3045,
+      "categoryId": "wear",
+      "name": "Sports Cap",
+      "unit": "1 pc",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082922/uploads/sports/Sports_Cap.png"
+    },
+    {
+      "id": 3046,
+      "categoryId": "wear",
+      "name": "Ankle Socks",
+      "unit": "3 pairs",
+      "price": 299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082881/uploads/sports/Ankle_Socks.png"
+    },
+    {
+      "id": 3047,
+      "categoryId": "wear",
+      "name": "Gym Vest",
+      "unit": "1 pc",
+      "price": 499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082899/uploads/sports/Gym_Vest.png"
+    },
+    {
+      "id": 3050,
+      "categoryId": "wear",
+      "name": "Sports Shoes",
+      "unit": "1 pair",
+      "price": 3499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082924/uploads/sports/Sports_Shoes.png"
+    }
+  ]
+}

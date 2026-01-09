@@ -1,0 +1,528 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Fruits & Vegetables",
+      "icon": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "Meat & Fish",
+      "icon": "Utensils"
+    },
+    {
+      "id": 3,
+      "name": "Snacks",
+      "icon": "Coffee"
+    },
+    {
+      "id": 4,
+      "name": "Pet Care",
+      "icon": "Dog"
+    },
+    {
+      "id": 5,
+      "name": "Home & Cleaning",
+      "icon": "Home"
+    },
+    {
+      "id": 6,
+      "name": "Dairy",
+      "icon": "Droplets"
+    },
+    {
+      "id": 7,
+      "name": "Cooking",
+      "icon": "Egg"
+    },
+    {
+      "id": 8,
+      "name": "Breakfast",
+      "icon": "Croissant"
+    },
+    {
+      "id": 9,
+      "name": "Beverage",
+      "icon": "Wine"
+    },
+    {
+      "id": 10,
+      "name": "Health & Beauty",
+      "icon": "Heart"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Apples",
+      "unit": "500g",
+      "price": 120,
+      "img": "http://localhost:4000/static/products/Apples.jpg"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Spinach",
+      "unit": "1 bunch",
+      "price": 30,
+      "img": "http://localhost:4000/static/products/Spinach.jpg"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "Broccoli",
+      "unit": "500g",
+      "price": 90,
+      "img": "http://localhost:4000/static/products/Broccoli.jpg"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "name": "Carrots",
+      "unit": "1kg",
+      "price": 50,
+      "img": "http://localhost:4000/static/products/Carrots.jpg"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "name": "Cucumber",
+      "unit": "500g",
+      "price": 35,
+      "img": "http://localhost:4000/static/products/Cucumber.jpg"
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "name": "Tomato",
+      "unit": "500g",
+      "price": 40,
+      "img": "http://localhost:4000/static/products/Tomato.jpg"
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "name": "Potato",
+      "unit": "1kg",
+      "price": 45,
+      "img": "http://localhost:4000/static/products/Potato.jpg"
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "name": "Onion",
+      "unit": "1kg",
+      "price": 55,
+      "img": "http://localhost:4000/static/products/Onion.jpg"
+    },
+    {
+      "id": 9,
+      "categoryId": 1,
+      "name": "Sweet Corn",
+      "unit": "500g",
+      "price": 60,
+      "img": "http://localhost:4000/static/products/Sweet Corn.jpg"
+    },
+    {
+      "id": 10,
+      "categoryId": 1,
+      "name": "Brussels Sprout",
+      "unit": "500g",
+      "price": 110,
+      "img": "http://localhost:4000/static/products/Brussels Sprout.jpg"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "name": "Salmon Fillet",
+      "unit": "500g",
+      "price": 1200,
+      "img": "http://localhost:4000/static/products/Salmon Fillet.jpg"
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "name": "Cod Fillet",
+      "unit": "500g",
+      "price": 650,
+      "img": "http://localhost:4000/static/products/Cod Fillet.jpg"
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "name": "Beef Steak",
+      "unit": "500g",
+      "price": 700,
+      "img": "http://localhost:4000/static/products/Beef Steak.jpg"
+    },
+    {
+      "id": 14,
+      "categoryId": 2,
+      "name": "Chicken Breast",
+      "unit": "1kg",
+      "price": 280,
+      "img": "http://localhost:4000/static/products/Chicken Breast.jpg"
+    },
+    {
+      "id": 15,
+      "categoryId": 2,
+      "name": "Lamb Chops",
+      "unit": "500g",
+      "price": 850,
+      "img": "http://localhost:4000/static/products/Lamb Chops.jpg"
+    },
+    {
+      "id": 16,
+      "categoryId": 2,
+      "name": "Shrimp",
+      "unit": "500g",
+      "price": 600,
+      "img": "http://localhost:4000/static/products/Shrimp.jpg"
+    },
+    {
+      "id": 21,
+      "categoryId": 3,
+      "name": "Potato Chips",
+      "unit": "200g",
+      "price": 60,
+      "img": "http://localhost:4000/static/products/Potato Chips.jpg"
+    },
+    {
+      "id": 22,
+      "categoryId": 3,
+      "name": "Chocolate Cookies",
+      "unit": "300g",
+      "price": 120,
+      "img": "http://localhost:4000/static/products/Chocolate Cookies.jpg"
+    },
+    {
+      "id": 23,
+      "categoryId": 3,
+      "name": "Salted Nuts",
+      "unit": "250g",
+      "price": 220,
+      "img": "http://localhost:4000/static/products/Salted Nuts.jpg"
+    },
+    {
+      "id": 25,
+      "categoryId": 3,
+      "name": "Granola Bar",
+      "unit": "6 pcs",
+      "price": 180,
+      "img": "http://localhost:4000/static/products/Granola Bar.png"
+    },
+    {
+      "id": 26,
+      "categoryId": 3,
+      "name": "Pretzels",
+      "unit": "200g",
+      "price": 95,
+      "img": "http://localhost:4000/static/products/Pretzels.jpg"
+    },
+    {
+      "id": 27,
+      "categoryId": 3,
+      "name": "Cheese Crackers",
+      "unit": "250g",
+      "price": 110,
+      "img": "http://localhost:4000/static/products/Cheese Crackers.png"
+    },
+    {
+      "id": 28,
+      "categoryId": 3,
+      "name": "Energy Bites",
+      "unit": "10 pcs",
+      "price": 250,
+      "img": "http://localhost:4000/static/products/Energy Bites.jpg"
+    },
+    {
+      "id": 31,
+      "categoryId": 4,
+      "name": "Dog Food",
+      "unit": "5kg",
+      "price": 1400,
+      "img": "http://localhost:4000/static/products/Dog Food.jpg"
+    },
+    {
+      "id": 32,
+      "categoryId": 4,
+      "name": "Cat Food",
+      "unit": "3kg",
+      "price": 1200,
+      "img": "http://localhost:4000/static/products/Cat Food.jpg"
+    },
+    {
+      "id": 33,
+      "categoryId": 4,
+      "name": "Pet Shampoo",
+      "unit": "500ml",
+      "price": 350,
+      "img": "http://localhost:4000/static/products/Pet Shampoo.png"
+    },
+    {
+      "id": 34,
+      "categoryId": 4,
+      "name": "Dog Toy",
+      "unit": "1 pc",
+      "price": 300,
+      "img": "http://localhost:4000/static/products/Dog Toy.jpg"
+    },
+    {
+      "id": 35,
+      "categoryId": 4,
+      "name": "Cat Litter",
+      "unit": "10kg",
+      "price": 900,
+      "img": "http://localhost:4000/static/products/Cat Litter.jpg"
+    },
+    {
+      "id": 41,
+      "categoryId": 5,
+      "name": "Laundry Detergent",
+      "unit": "2L",
+      "price": 420,
+      "img": "http://localhost:4000/static/products/Laundry Detergent.png"
+    },
+    {
+      "id": 43,
+      "categoryId": 5,
+      "name": "Floor Cleaner",
+      "unit": "2L",
+      "price": 280,
+      "img": "http://localhost:4000/static/products/Floor Cleaner.png"
+    },
+    {
+      "id": 44,
+      "categoryId": 5,
+      "name": "Glass Cleaner",
+      "unit": "500ml",
+      "price": 160,
+      "img": "http://localhost:4000/static/products/Glass Cleaner.png"
+    },
+    {
+      "id": 45,
+      "categoryId": 5,
+      "name": "Paper Towels",
+      "unit": "6 rolls",
+      "price": 240,
+      "img": "http://localhost:4000/static/products/Paper Towels.png"
+    },
+    {
+      "id": 46,
+      "categoryId": 5,
+      "name": "Trash Bags",
+      "unit": "30 pcs",
+      "price": 190,
+      "img": "http://localhost:4000/static/products/Trash Bags.png"
+    },
+    {
+      "id": 47,
+      "categoryId": 5,
+      "name": "Sponge Pack",
+      "unit": "5 pcs",
+      "price": 120,
+      "img": "http://localhost:4000/static/products/Sponge Pack.png"
+    },
+    {
+      "id": 48,
+      "categoryId": 5,
+      "name": "Toilet Cleaner",
+      "unit": "750ml",
+      "price": 180,
+      "img": "http://localhost:4000/static/products/Toilet Cleaner.png"
+    },
+    {
+      "id": 51,
+      "categoryId": 6,
+      "name": "Milk",
+      "unit": "1L",
+      "price": 60,
+      "img": "http://localhost:4000/static/products/milk.png"
+    },
+    {
+      "id": 52,
+      "categoryId": 6,
+      "name": "Cheese",
+      "unit": "500g",
+      "price": 260,
+      "img": "http://localhost:4000/static/products/cheese.png"
+    },
+    {
+      "id": 53,
+      "categoryId": 6,
+      "name": "Butter",
+      "unit": "250g",
+      "price": 140,
+      "img": "http://localhost:4000/static/products/Butter.png"
+    },
+    {
+      "id": 54,
+      "categoryId": 6,
+      "name": "Yogurt",
+      "unit": "500g",
+      "price": 75,
+      "img": "http://localhost:4000/static/products/Yogurt.png"
+    },
+    {
+      "id": 55,
+      "categoryId": 6,
+      "name": "Cream",
+      "unit": "250ml",
+      "price": 90,
+      "img": "http://localhost:4000/static/products/Cream.png"
+    },
+    {
+      "id": 56,
+      "categoryId": 6,
+      "name": "Paneer",
+      "unit": "500g",
+      "price": 240,
+      "img": "http://localhost:4000/static/products/Paneer.png"
+    },
+    {
+      "id": 61,
+      "categoryId": 7,
+      "name": "Olive Oil",
+      "unit": "1L",
+      "price": 850,
+      "img": "http://localhost:4000/static/products/olive oil.png"
+    },
+    {
+      "id": 62,
+      "categoryId": 7,
+      "name": "Sunflower Oil",
+      "unit": "1L",
+      "price": 160,
+      "img": "http://localhost:4000/static/products/Sunflower Oil.png"
+    },
+    {
+      "id": 63,
+      "categoryId": 7,
+      "name": "Salt",
+      "unit": "1kg",
+      "price": 25,
+      "img": "http://localhost:4000/static/products/salt.png"
+    },
+    {
+      "id": 64,
+      "categoryId": 7,
+      "name": "Sugar",
+      "unit": "2kg",
+      "price": 90,
+      "img": "http://localhost:4000/static/products/Sugar.png"
+    },
+    {
+      "id": 65,
+      "categoryId": 7,
+      "name": "Flour",
+      "unit": "5kg",
+      "price": 220,
+      "img": "http://localhost:4000/static/products/flour.png"
+    },
+    {
+      "id": 66,
+      "categoryId": 7,
+      "name": "Rice",
+      "unit": "5kg",
+      "price": 320,
+      "img": "http://localhost:4000/static/products/rice.png"
+    },
+    {
+      "id": 71,
+      "categoryId": 8,
+      "name": "Chips",
+      "unit": "500g",
+      "price": 150,
+      "img": "http://localhost:4000/static/products/Chips.jpg"
+    },
+    {
+      "id": 72,
+      "categoryId": 8,
+      "name": "Popcorn",
+      "unit": "1kg",
+      "price": 180,
+      "img": "http://localhost:4000/static/products/popcorn.jpg"
+    },
+    {
+      "id": 81,
+      "categoryId": 9,
+      "name": "Orange Juice",
+      "unit": "1L",
+      "price": 120,
+      "img": "http://localhost:4000/static/products/Orange Juice.png"
+    },
+    {
+      "id": 82,
+      "categoryId": 9,
+      "name": "Apple Juice",
+      "unit": "1L",
+      "price": 125,
+      "img": "http://localhost:4000/static/products/Apple Juice.png"
+    },
+    {
+      "id": 87,
+      "categoryId": 9,
+      "name": "Smoothie",
+      "unit": "250ml",
+      "price": 180,
+      "img": "http://localhost:4000/static/products/Smoothie.png"
+    },
+    {
+      "id": 88,
+      "categoryId": 9,
+      "name": "Coconut Water",
+      "unit": "500ml",
+      "price": 65,
+      "img": "http://localhost:4000/static/products/Coconut Water.png"
+    },
+    {
+      "id": 89,
+      "categoryId": 9,
+      "name": "Energy Drink",
+      "unit": "250ml",
+      "price": 110,
+      "img": "http://localhost:4000/static/products/Energy Drink.png"
+    },
+    {
+      "id": 91,
+      "categoryId": 10,
+      "name": "Toothpaste",
+      "unit": "150g",
+      "price": 110,
+      "img": "http://localhost:4000/static/products/Toothpaste.png"
+    },
+    {
+      "id": 92,
+      "categoryId": 10,
+      "name": "Toothbrush",
+      "unit": "1 pc",
+      "price": 80,
+      "img": "http://localhost:4000/static/products/Toothbrush.png"
+    },
+    {
+      "id": 93,
+      "categoryId": 10,
+      "name": "Deodorant",
+      "unit": "150ml",
+      "price": 220,
+      "img": "http://localhost:4000/static/products/Deodorant.png"
+    },
+    {
+      "id": 94,
+      "categoryId": 10,
+      "name": "Hand Cream",
+      "unit": "50ml",
+      "price": 180,
+      "img": "http://localhost:4000/static/products/Hand Cream.png"
+    },
+    {
+      "id": 95,
+      "categoryId": 10,
+      "name": "Shaving Gel",
+      "unit": "200ml",
+      "price": 210,
+      "img": "http://localhost:4000/static/products/Shaving Gel.png"
+    }
+  ]
+}

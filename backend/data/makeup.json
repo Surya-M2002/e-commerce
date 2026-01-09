@@ -1,0 +1,266 @@
+{
+  "categories": [
+    {
+      "id": "face",
+      "name": "Face"
+    },
+    {
+      "id": "eyes",
+      "name": "Eyes"
+    },
+    {
+      "id": "lips",
+      "name": "Lips"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories"
+    },
+    {
+      "id": "shaving",
+      "name": "Shaving Needs"
+    },
+    {
+      "id": "oral",
+      "name": "Oral Care"
+    },
+    {
+      "id": "facial",
+      "name": "Facial Care"
+    },
+    {
+      "id": "deodorant",
+      "name": "Deodorant"
+    },
+    {
+      "id": "bath",
+      "name": "Bath & Oil"
+    }
+  ],
+  "products": [
+    {
+      "id": 9001,
+      "categoryId": "face",
+      "name": "Foundation",
+      "unit": "30ml",
+      "price": 499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413044/Foundation_mwxkzi.jpg"
+    },
+    {
+      "id": 9002,
+      "categoryId": "face",
+      "name": "Concealer",
+      "unit": "10ml",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413034/Concealer_ivv6yl.jpg"
+    },
+    {
+      "id": 9003,
+      "categoryId": "face",
+      "name": "Compact Powder",
+      "unit": "20g",
+      "price": 299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413002/shamblen-studios-xwM61TPMlYk-unsplash_hypfsv.jpg"
+    },
+    {
+      "id": 9006,
+      "categoryId": "eyes",
+      "name": "Mascara",
+      "unit": "10ml",
+      "price": 299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412970/Mascara_baviqk.jpg"
+    },
+    {
+      "id": 9007,
+      "categoryId": "eyes",
+      "name": "Eyeliner",
+      "unit": "1 pc",
+      "price": 199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412968/Makeup_Sponge_scfe12.jpg"
+    },
+    {
+      "id": 9008,
+      "categoryId": "eyes",
+      "name": "Eyeshadow Palette",
+      "unit": "10g",
+      "price": 699,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412985/pexels-magda-ehlers-pexels-1383537_cx2mgz.jpg"
+    },
+    {
+      "id": 9011,
+      "categoryId": "lips",
+      "name": "Lip Gloss",
+      "unit": "8ml",
+      "price": 199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412972/Matte_Lipstick_bku7km.jpg"
+    },
+    {
+      "id": 9012,
+      "categoryId": "lips",
+      "name": "Matte Lipstick",
+      "unit": "1 pc",
+      "price": 249,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412964/Lip_Gloss_nkjoig.jpg"
+    },
+    {
+      "id": 9013,
+      "categoryId": "lips",
+      "name": "Lip Balm",
+      "unit": "5g",
+      "price": 149,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413002/shamblen-studios-xwM61TPMlYk-unsplash_hypfsv.jpg"
+    },
+    {
+      "id": 9014,
+      "categoryId": "lips",
+      "name": "Liquid Lipstick",
+      "unit": "6ml",
+      "price": 299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412988/pexels-paduret-1377034_myw6np.jpg"
+    },
+    {
+      "id": 9016,
+      "categoryId": "accessories",
+      "name": "Brush Set",
+      "unit": "5 pcs",
+      "price": 499,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413002/shamblen-studios-xwM61TPMlYk-unsplash_hypfsv.jpg"
+    },
+    {
+      "id": 9017,
+      "categoryId": "accessories",
+      "name": "Makeup Sponge",
+      "unit": "2 pcs",
+      "price": 199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413030/Brush_Set_nrfexf.jpg"
+    },
+    {
+      "id": 9018,
+      "categoryId": "accessories",
+      "name": "Tweezers",
+      "unit": "1 pc",
+      "price": 149,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413044/Foundation_mwxkzi.jpg"
+    },
+    {
+      "id": 9021,
+      "categoryId": "shaving",
+      "name": "Shaving Cream",
+      "unit": "200ml",
+      "price": 199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413001/Safety_Razor_ffvwlu.jpg"
+    },
+    {
+      "id": 9022,
+      "categoryId": "shaving",
+      "name": "Razor",
+      "unit": "3 pack",
+      "price": 349,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412983/pexels-cedric-fauntleroy-4269355_kdl3zm.jpg"
+    },
+    {
+      "id": 9023,
+      "categoryId": "shaving",
+      "name": "Shaving Gel",
+      "unit": "150ml",
+      "price": 249,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082724/uploads/makeup/Spray.jpg"
+    },
+    {
+      "id": 9024,
+      "categoryId": "shaving",
+      "name": "Aftershave Lotion",
+      "unit": "100ml",
+      "price": 299,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082725/uploads/makeup/Toothbrush.jpg"
+    },
+    {
+      "id": 9025,
+      "categoryId": "shaving",
+      "name": "Safety Razor",
+      "unit": "1 pc",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082723/uploads/makeup/Shaving_Gel.jpg"
+    },
+    {
+      "id": 9026,
+      "categoryId": "oral",
+      "name": "Toothpaste",
+      "unit": "150g",
+      "price": 99,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767419344/Toothpaste_m6wqxf.png"
+    },
+    {
+      "id": 9027,
+      "categoryId": "oral",
+      "name": "Mouthwash",
+      "unit": "500ml",
+      "price": 199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413024/Body_Mist_ccjje3.jpg"
+    },
+    {
+      "id": 9028,
+      "categoryId": "oral",
+      "name": "Toothbrush",
+      "unit": "1 pc",
+      "price": 149,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767419344/Toothbrush_wvtewr.png"
+    },
+    {
+      "id": 9031,
+      "categoryId": "facial",
+      "name": "Moisturizer",
+      "unit": "50ml",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413042/Face_Wash_fw8pk5.jpg"
+    },
+    {
+      "id": 9032,
+      "categoryId": "facial",
+      "name": "Face Wash",
+      "unit": "150ml",
+      "price": 249,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413027/Body_Wash_hbpmjw.jpg"
+    },
+    {
+      "id": 9036,
+      "categoryId": "deodorant",
+      "name": "Roll-on",
+      "unit": "50ml",
+      "price": 149,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412995/Razor_zhauvn.jpg"
+    },
+    {
+      "id": 9037,
+      "categoryId": "deodorant",
+      "name": "Spray",
+      "unit": "150ml",
+      "price": 199,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767413020/Aftershave_Lotion_zgsroc.jpg"
+    },
+    {
+      "id": 9038,
+      "categoryId": "deodorant",
+      "name": "Body Mist",
+      "unit": "100ml",
+      "price": 249,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767412980/pexels-alesiakozik-7797851_yxdkrl.jpg"
+    },
+    {
+      "id": 9041,
+      "categoryId": "bath",
+      "name": "Body Wash",
+      "unit": "500ml",
+      "price": 249,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082723/uploads/makeup/Shaving_Gel.jpg"
+    },
+    {
+      "id": 9042,
+      "categoryId": "bath",
+      "name": "Bath Oil",
+      "unit": "200ml",
+      "price": 399,
+      "img": "https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082728/uploads/makeup/Tweezers.jpg"
+    }
+  ]
+}
