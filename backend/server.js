@@ -8,6 +8,8 @@ import mongoose from "mongoose";
 import connectDB from "./config/db.js";
 import Category from "./models/Category.js";
 import Product from "./models/Product.js";
+import productsRouter from "./routes/products.js";
+import categoriesRouter from "./routes/categories.js";
 
 dotenv.config();
 
@@ -17,6 +19,8 @@ const PORT = process.env.PORT || 4000;
 app.use(cors({ origin: true }));
 app.use(express.json());
 app.use(compression());
+app.use("/api/products", productsRouter);
+app.use("/api/categories", categoriesRouter);
 
 const ROOT = path.resolve(process.cwd(), "..");
 app.use(

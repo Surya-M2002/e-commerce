@@ -41,8 +41,8 @@ const FashionPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   useEffect(() => {
     const load = async () => {
       const [catsRes, prodRes] = await Promise.all([
-        fetch(`${API_URL}/categories?domain=fashion`),
-        fetch(`${API_URL}/products?domain=fashion`),
+        fetch(`${API_URL}/api/categories?domain=fashion`),
+        fetch(`${API_URL}/api/products?domain=fashion`),
       ]);
       const cats = await catsRes.json();
       const items = await prodRes.json();

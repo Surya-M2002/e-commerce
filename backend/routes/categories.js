@@ -1,6 +1,5 @@
 import express from "express";
 import Category from "../models/Category.js";
-import Product from "../models/Product.js";
 
 const router = express.Router();
 
@@ -100,61 +99,19 @@ const slugForName = (domain, name) => {
 
 router.get("/", async (req, res) => {
   try {
-    const { domain, categoryId, q } = req.query;
+    const { domain } = req.query;
     const dom = domain ? normalizeDomain(domain) : null;
-    const filter = {};
-    if (dom) filter.domain = { $in: domainSet(dom) };
-
-    let cats = null;
-    if (categoryId) {
-      const cid = String(categoryId);
-      const looksLikeObjectId = /^[a-f0-9]{24}$/i.test(cid);
-      if (looksLikeObjectId) {
-        filter.categoryId = cid;
-      } else if (dom) {
-        cats = await Category.find({ domain: { $in: domainSet(dom) } }).lean();
-        const invMap = new Map(
-          cats.map((c) => [slugForName(dom, c.name), String(c._id)])
-        );
-        const mapped = invMap.get(cid) || invMap.get(String(cid).toLowerCase());
-        if (mapped) filter.categoryId = mapped;
-        else filter.categoryId = cid;
-      } else {
-        filter.categoryId = cid;
-      }
-    }
-
-    let prods = await Product.find(filter).lean();
-    if (q) {
-      const s = String(q).toLowerCase();
-      prods = prods.filter((p) => String(p.name).toLowerCase().includes(s));
-    }
-    if (!cats && dom) {
-      cats = await Category.find({ domain: { $in: domainSet(dom) } }).lean();
-    }
-    const idMap =
-      cats && cats.length > 0
-        ? new Map(
-            cats.map((c) => [
-              String(c._id),
-              slugForName(dom || c.domain, c.name),
-            ])
-          )
-        : null;
-    const out = prods.map((p, idx) => ({
-      id: idx + 1,
-      name: p.name,
-      unit: p.unit,
-      price: p.price,
-      img: p.image || p.img || "",
-      _id: p._id,
-      categoryId: idMap
-        ? idMap.get(String(p.categoryId)) || null
-        : p.categoryId || null,
+    const q = dom ? { domain: { $in: domainSet(dom) } } : {};
+    const cats = await Category.find(q).lean();
+    const out = cats.map((c) => ({
+      id: slugForName(dom || c.domain, c.name),
+      name: c.name,
+      icon: c.icon,
+      _id: c._id,
     }));
     res.json(out);
   } catch (e) {
-    res.status(500).json({ error: "Failed to load products" });
+    res.status(500).json({ error: "Failed to load categories" });
   }
 });
 

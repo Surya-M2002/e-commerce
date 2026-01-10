@@ -54,8 +54,8 @@ const Home = ({ cart, updateCart, removeItem, onCheckout, activeCategoryId, onSe
   useEffect(() => {
     const load = async () => {
       const [catsRes, prodRes] = await Promise.all([
-        fetch(`${API_URL}/categories?domain=${domain}`),
-        fetch(`${API_URL}/products?domain=${domain}`),
+        fetch(`${API_URL}/api/categories?domain=${domain}`),
+        fetch(`${API_URL}/api/products?domain=${domain}`),
       ]);
       const cats = await catsRes.json();
       const items = await prodRes.json();

@@ -51,8 +51,8 @@ const GiftPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   useEffect(() => {
     const load = async () => {
       const [catsRes, prodRes] = await Promise.all([
-        fetch(`${API_URL}/categories?domain=gift`),
-        fetch(`${API_URL}/products?domain=gift`),
+        fetch(`${API_URL}/api/categories?domain=gift`),
+        fetch(`${API_URL}/api/products?domain=gift`),
       ]);
       const cats = await catsRes.json();
       const items = await prodRes.json();

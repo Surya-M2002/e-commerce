@@ -39,8 +39,8 @@ const ElectronicsPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   useEffect(() => {
     const load = async () => {
       const [catsRes, prodRes] = await Promise.all([
-        fetch(`${API_URL}/categories?domain=electronics`),
-        fetch(`${API_URL}/products?domain=electronics`),
+        fetch(`${API_URL}/api/categories?domain=electronics`),
+        fetch(`${API_URL}/api/products?domain=electronics`),
       ]);
       const cats = await catsRes.json();
       const items = await prodRes.json();

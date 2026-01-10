@@ -44,8 +44,8 @@ const MakeupPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   useEffect(() => {
     const load = async () => {
       const [catsRes, prodRes] = await Promise.all([
-        fetch(`${API_URL}/categories?domain=makeup`),
-        fetch(`${API_URL}/products?domain=makeup`),
+        fetch(`${API_URL}/api/categories?domain=makeup`),
+        fetch(`${API_URL}/api/products?domain=makeup`),
       ]);
       const cats = await catsRes.json();
       const items = await prodRes.json();
