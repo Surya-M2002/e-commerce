@@ -7,14 +7,14 @@ async function getJson(url) {
 }
 
 export async function fetchCategories(domain) {
-  const u1 = `${API_URL}/api/categories?domain=${domain}`;
-  const u2 = `${API_URL}/categories?domain=${domain}`;
+  const api = `${API_URL}/api/categories?domain=${domain}`;
+  const legacy = `${API_URL}/categories?domain=${domain}`;
   try {
-    const data = await getJson(u1);
+    const data = await getJson(api);
     return Array.isArray(data) ? data : [];
   } catch {
     try {
-      const data = await getJson(u2);
+      const data = await getJson(legacy);
       return Array.isArray(data) ? data : [];
     } catch {
       return [];
@@ -23,18 +23,17 @@ export async function fetchCategories(domain) {
 }
 
 export async function fetchProducts(domain) {
-  const u1 = `${API_URL}/api/products?domain=${domain}`;
-  const u2 = `${API_URL}/products?domain=${domain}`;
+  const api = `${API_URL}/api/products?domain=${domain}`;
+  const legacy = `${API_URL}/products?domain=${domain}`;
   try {
-    const data = await getJson(u1);
+    const data = await getJson(api);
     return Array.isArray(data) ? data : [];
   } catch {
     try {
-      const data = await getJson(u2);
+      const data = await getJson(legacy);
       return Array.isArray(data) ? data : [];
     } catch {
       return [];
     }
   }
 }
-
