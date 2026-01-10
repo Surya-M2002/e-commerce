@@ -8,7 +8,7 @@ import ProductModal from '../components/ProductModal';
 import useScrollToResults from '../hooks/useScrollToResults';
 import useDebouncedValue from '../hooks/useDebouncedValue';
 import { includesMatch } from '../utils/search';
-import API_URL from '../config';
+import { fetchCategories, fetchProducts } from '../utils/apiClient';
 
 const FashionPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   const [activeCat, setActiveCat] = useState(null);
@@ -40,14 +40,12 @@ const FashionPage = ({ cart, updateCart, removeItem, onCheckout }) => {
 
   useEffect(() => {
     const load = async () => {
-      const [catsRes, prodRes] = await Promise.all([
-        fetch(`${API_URL}/api/categories?domain=fashion`),
-        fetch(`${API_URL}/api/products?domain=fashion`),
+      const [cats, items] = await Promise.all([
+        fetchCategories('fashion'),
+        fetchProducts('fashion'),
       ]);
-      const cats = await catsRes.json();
-      const items = await prodRes.json();
-      setCategories(Array.isArray(cats) ? cats : []);
-      setProducts(Array.isArray(items) ? items : []);
+      setCategories(cats);
+      setProducts(items);
     };
     load();
   }, []);

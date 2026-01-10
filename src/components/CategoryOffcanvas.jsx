@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as LucideIcons from "lucide-react";
-import API_URL from "../config";
+import { fetchCategories } from "../utils/apiClient";
 
 const CategoryOffcanvas = ({ activeCategoryId, onSelect }) => {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch(`${API_URL}/categories?domain=grocery`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (Array.isArray(data)) setCategories(data);
-      })
-      .catch((err) => console.error("Failed to load categories", err));
+    (async () => {
+      const data = await fetchCategories('grocery');
+      setCategories(data);
+    })();
   }, []);
   return (
     <>

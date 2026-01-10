@@ -7,7 +7,7 @@ import PromoBanners from '../components/bags/PromoBanners';
 import ProductModal from '../components/ProductModal';
 import useScrollToResults from '../hooks/useScrollToResults';
 import { includesMatch } from '../utils/search';
-import API_URL from '../config';
+import { fetchCategories, fetchProducts } from '../utils/apiClient';
 
 const BagsPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   const [activeCat, setActiveCat] = useState(null);
@@ -38,14 +38,12 @@ const BagsPage = ({ cart, updateCart, removeItem, onCheckout }) => {
 
   useEffect(() => {
     const load = async () => {
-      const [catsRes, prodRes] = await Promise.all([
-        fetch(`${API_URL}/api/categories?domain=bags`),
-        fetch(`${API_URL}/api/products?domain=bags`),
+      const [cats, items] = await Promise.all([
+        fetchCategories('bags'),
+        fetchProducts('bags'),
       ]);
-      const cats = await catsRes.json();
-      const items = await prodRes.json();
-      setCategories(Array.isArray(cats) ? cats : []);
-      setProducts(Array.isArray(items) ? items : []);
+      setCategories(cats);
+      setProducts(items);
     };
     load();
   }, []);

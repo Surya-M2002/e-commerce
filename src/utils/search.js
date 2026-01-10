@@ -19,8 +19,8 @@ export const includesMatch = (product, query) => {
 export const loadDomainData = async (API, domain) => {
   try {
     const [catsRes, prodRes] = await Promise.all([
-      fetch(`${API}/categories?domain=${domain}`),
-      fetch(`${API}/products?domain=${domain}`)
+      fetch(`${API}/api/categories?domain=${domain}`),
+      fetch(`${API}/api/products?domain=${domain}`)
     ]);
     if (catsRes.ok && prodRes.ok) {
       const cats = await catsRes.json();
