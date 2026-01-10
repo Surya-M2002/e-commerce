@@ -176,6 +176,25 @@ app.get("/auth/google/callback", async (req, res) => {
   }
 });
 
+// Auth: current user from JWT
+app.get("/users/me", async (req, res) => {
+  try {
+    const auth = req.headers.authorization || "";
+    const m = auth.match(/^Bearer\s+(.+)/i);
+    if (!m) return res.status(401).json({ error: "Unauthorized" });
+    const token = m[1];
+    const jwt = (await import("jsonwebtoken")).default;
+    const payload = jwt.verify(token, env.JWT_SECRET || "DEV_SECRET");
+    return res.json({
+      id: payload.id,
+      email: payload.email,
+      name: payload.name,
+    });
+  } catch (e) {
+    return res.status(401).json({ error: "Invalid token" });
+  }
+});
+
 const normalizeDomain = (d) => {
   const key = String(d || "").toLowerCase();
   return (
