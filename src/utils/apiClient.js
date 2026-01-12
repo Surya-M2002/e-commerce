@@ -1,4 +1,5 @@
 import API_URL from "../config";
+import { loadDomainData } from "./search";
 
 async function getJson(url) {
   const res = await fetch(url);
@@ -7,33 +8,39 @@ async function getJson(url) {
 }
 
 export async function fetchCategories(domain) {
-  const api = `${API_URL}/api/categories?domain=${domain}`;
-  const legacy = `${API_URL}/categories?domain=${domain}`;
+  const qs = domain ? `?domain=${encodeURIComponent(domain)}` : "";
+  const api = `${API_URL}/api/categories${qs}`;
+  const legacy = `${API_URL}/categories${qs}`;
   try {
     const data = await getJson(api);
-    return Array.isArray(data) ? data : [];
+    if (Array.isArray(data) && data.length) return data;
   } catch {
     try {
       const data = await getJson(legacy);
-      return Array.isArray(data) ? data : [];
+      if (Array.isArray(data) && data.length) return data;
     } catch {
-      return [];
+      /* noop */
     }
   }
+  const fallback = await loadDomainData(API_URL, domain || "grocery");
+  return Array.isArray(fallback.categories) ? fallback.categories : [];
 }
 
 export async function fetchProducts(domain) {
-  const api = `${API_URL}/api/products?domain=${domain}`;
-  const legacy = `${API_URL}/products?domain=${domain}`;
+  const qs = domain ? `?domain=${encodeURIComponent(domain)}` : "";
+  const api = `${API_URL}/api/products${qs}`;
+  const legacy = `${API_URL}/products${qs}`;
   try {
     const data = await getJson(api);
-    return Array.isArray(data) ? data : [];
+    if (Array.isArray(data) && data.length) return data;
   } catch {
     try {
       const data = await getJson(legacy);
-      return Array.isArray(data) ? data : [];
+      if (Array.isArray(data) && data.length) return data;
     } catch {
-      return [];
+      /* noop */
     }
   }
+  const fallback = await loadDomainData(API_URL, domain || "grocery");
+  return Array.isArray(fallback.products) ? fallback.products : [];
 }

@@ -100,7 +100,10 @@ const slugForName = (domain, name) => {
 router.get("/", async (req, res) => {
   try {
     const { domain } = req.query;
-    const dom = domain ? normalizeDomain(domain) : null;
+    const dom =
+      domain && domain !== "undefined" && domain !== "null"
+        ? normalizeDomain(domain)
+        : null;
     const q = dom ? { domain: { $in: domainSet(dom) } } : {};
     const cats = await Category.find(q).lean();
     const out = cats.map((c) => ({

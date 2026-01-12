@@ -42,8 +42,6 @@ function App() {
   }); // Moved cart state here
   const [manualActiveCategoryId, setManualActiveCategoryId] = useState(null);
   const headerKey = location.pathname === '/' ? 'grocery' : location.pathname.slice(1).toLowerCase();
-  const HOME_CATEGORY_MAP = { bakery: 8, daily: 5 };
-  const derivedCategoryId = HOME_CATEGORY_MAP[headerKey] ?? null;
   const [user, setUser] = useState(() => {
     try {
       const saved = localStorage.getItem('pb_user');
@@ -133,12 +131,6 @@ function App() {
         activeHeaderKey={headerKey}
         onSelectHeader={(key) => {
           if (key === 'grocery') {
-            setManualActiveCategoryId(null);
-            navigate('/');
-            return;
-          }
-          if (HOME_CATEGORY_MAP[key]) {
-            setManualActiveCategoryId(HOME_CATEGORY_MAP[key]);
             navigate('/');
             return;
           }
@@ -146,7 +138,7 @@ function App() {
         }}
       />
       <CategoryOffcanvas
-        activeCategoryId={manualActiveCategoryId ?? derivedCategoryId}
+        activeCategoryId={manualActiveCategoryId}
         onSelect={(id) => {
           setManualActiveCategoryId(id);
           navigate('/');
@@ -163,7 +155,7 @@ function App() {
                 updateCart={updateCart}
                 removeItem={removeItem}
                 onCheckout={() => navigate(user ? '/checkout' : '/login')}
-                activeCategoryId={manualActiveCategoryId ?? derivedCategoryId}
+                activeCategoryId={manualActiveCategoryId}
                 onSelectCategory={setManualActiveCategoryId}
               />
             }
@@ -231,7 +223,7 @@ function App() {
                 updateCart={updateCart}
                 removeItem={removeItem}
                 onCheckout={() => navigate(user ? '/checkout' : '/login')}
-                activeCategoryId={manualActiveCategoryId ?? derivedCategoryId}
+                activeCategoryId={manualActiveCategoryId}
                 onSelectCategory={setManualActiveCategoryId}
                 domain="daily"
               />

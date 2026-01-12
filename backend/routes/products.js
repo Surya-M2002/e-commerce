@@ -101,7 +101,10 @@ const slugForName = (domain, name) => {
 router.get("/", async (req, res) => {
   try {
     const { domain, categoryId, q } = req.query;
-    const dom = domain ? normalizeDomain(domain) : null;
+    const dom =
+      domain && domain !== "undefined" && domain !== "null"
+        ? normalizeDomain(domain)
+        : null;
     const filter = {};
     if (dom) filter.domain = { $in: domainSet(dom) };
 
