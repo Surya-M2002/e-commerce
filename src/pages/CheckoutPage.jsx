@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import API_URL from "../config";
 import {
   FaCheckCircle,
   FaMoneyBillWave,
@@ -24,7 +25,7 @@ const CheckoutPage = ({ cartItems, onOrderPlaced }) => {
     let paymentMeta = { payment: selectedPayment };
     if (selectedPayment === "upi") {
       try {
-        const res = await fetch("http://localhost:4000/payments/initiate", {
+        const res = await fetch(`${API_URL}/payments/initiate`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ method: "upi", amount: subtotal })

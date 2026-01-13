@@ -14,7 +14,7 @@ const banners = [
   },
   {
     title: 'Free Delivery',
-    subtitle: 'With selected items',
+    subtitle: 'With selected items within 90 Minutes',
     cta: 'Save Now',
     to: '/offers',
     gradient: 'linear-gradient(90deg,#ffd07a 0%, #ffb274 100%)',
