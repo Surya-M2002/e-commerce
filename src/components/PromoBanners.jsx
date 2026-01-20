@@ -21,7 +21,7 @@ const banners = [
     img: 'https://res.cloudinary.com/djfh1ooz6/image/upload/v1767843095/Screenshot_2026-01-08_083529_drqgta.png',
   },
   {
-    title: 'Coupon Savings',
+    title: 'Free Coupon ',
     subtitle: 'Up to 40% off everyday essentials',
     cta: 'Shop Coupons',
     to: '/offers',

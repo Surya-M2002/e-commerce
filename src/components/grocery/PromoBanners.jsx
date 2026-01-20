@@ -21,7 +21,7 @@ const banners = [
     img: 'https://res.cloudinary.com/djfh1ooz6/image/upload/v1767082806/uploads/products/pexels-paduret-1377034.jpg',
   },
   {
-    title: 'Coupon Savings',
+    title: 'Free Coupon',
     subtitle: 'Up to 40% off everyday essentials',
     cta: 'Shop Coupons',
     to: '/offers',

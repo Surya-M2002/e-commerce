@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { ShoppingBag } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 import { FaAppleAlt, FaUtensils, FaCoffee, FaDog, FaHome, FaTint, FaEgg, FaBreadSlice, FaWineGlass, FaHeart } from "react-icons/fa";
@@ -22,6 +22,7 @@ const Home = ({ cart, updateCart, removeItem, onCheckout, activeCategoryId, onSe
   const resultsRef = useRef(null);
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const activeCat = activeCategoryId ?? null;
   useScrollToResults(resultsRef, appliedSearch);
@@ -44,21 +45,24 @@ const Home = ({ cart, updateCart, removeItem, onCheckout, activeCategoryId, onSe
   const iconMap = Object.fromEntries(categories.map((cat) => {
     const L = LucideIcons[cat.icon];
     const F = fallbackMap[cat.icon];
-    return [cat.id, L || F];
-  }));
+    return [cat.id, L || F];  }));
 
   const formatINR = (n) => `₹${n.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
-  const filtered = products.filter((p) => (!appliedSearch || includesMatch(p, appliedSearch)) && (!activeCat || p.categoryId === activeCat));
+  const filtered = useMemo(() => {
+    return products.filter((p) => (!appliedSearch || includesMatch(p, appliedSearch)) && (!activeCat || p.categoryId === activeCat));
+  }, [products, appliedSearch, activeCat]);
 
   useEffect(() => {
     const load = async () => {
+      setLoading(true);
       const [cats, items] = await Promise.all([
         fetchCategories(domain),
         fetchProducts(domain),
       ]);
       setCategories(cats);
       setProducts(items);
+      setLoading(false);
     };
     load();
   }, [domain]);
@@ -132,17 +136,35 @@ const Home = ({ cart, updateCart, removeItem, onCheckout, activeCategoryId, onSe
           {/* PRODUCT GRID */}
           <div className="col-lg-10 ps-lg-4">
             <div className="row g-4">
-              {filtered.map((p) => (
-                <div key={p.id} className="col-6 col-md-4 col-xl-3">
-                  <ProductCard
-                    product={p}
-                    qty={getQty(p.id)}
-                    onAdd={() => updateCart(p, 1)}
-                    onRemove={() => updateCart(p, -1)}
-                    onView={() => setSelectedProduct(p)}
-                  />
-                </div>
-              ))}
+              {loading
+                ? Array.from({ length: 8 }).map((_, idx) => (
+                    <div key={`sk-${idx}`} className="col-6 col-md-4 col-xl-3">
+                      <div className="card product-card border-0 shadow-sm h-100 skeleton-card">
+                        <div className="p-4 text-center">
+                          <div className="skeleton skeleton-img"></div>
+                        </div>
+                        <div className="card-body pt-0 d-flex flex-column">
+                          <div className="skeleton skeleton-line" style={{ width: "100%" }}></div>
+                          <div className="skeleton skeleton-line" style={{ width: "70%" }}></div>
+                          <div className="mt-auto d-flex justify-content-between align-items-center">
+                            <div className="skeleton skeleton-price"></div>
+                            <div className="skeleton skeleton-btn"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                : filtered.map((p) => (
+                    <div key={p.id} className="col-6 col-md-4 col-xl-3">
+                      <ProductCard
+                        product={p}
+                        qty={getQty(p.id)}
+                        onAdd={() => updateCart(p, 1)}
+                        onRemove={() => updateCart(p, -1)}
+                        onView={() => setSelectedProduct(p)}
+                      />
+                    </div>
+                  ))}
             </div>
           </div>
         </div>

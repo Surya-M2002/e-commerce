@@ -7,6 +7,14 @@ const defaultProfile = { name: "Arun Kumar", email: "arun.kumar@example.com", ph
 
 const ProfilePage = () => {
   const navigate = useNavigate();
+  const [authorized] = useState(() => {
+    try {
+      const raw = localStorage.getItem("pb_user");
+      return !!raw;
+    } catch {
+      return false;
+    }
+  });
   const [profile, setProfile] = useState(() => {
     try {
       const raw = localStorage.getItem("userProfile");
@@ -51,6 +59,10 @@ const ProfilePage = () => {
   const tier = ordersCount >= 10 ? "Gold" : ordersCount >= 5 ? "Silver" : "Basic";
 
   useEffect(() => {
+    if (!authorized) {
+      navigate("/login");
+      return;
+    }
     const load = async () => {
       if (!token) return;
       try {

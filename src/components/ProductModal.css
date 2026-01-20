@@ -177,14 +177,18 @@
 
 /* Make ProductCard stretch properly */
 
-.row.g-3 > div {
+.pb-modal-content .row.g-3 {
+  align-items: stretch;
+}
+
+.pb-modal-content .row.g-3 > div {
   display: flex;
 }
 
 .pb-modal-content .product-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1 1 auto;
 }
 
 .pb-modal-content .product-card img {
@@ -195,16 +199,15 @@
 }
 
 .pb-modal-content .product-card .p-4.text-center {
-  min-height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .pb-modal-content .product-card .card-body {
-  min-height: 170px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .pb-modal-content .product-card .p-4.text-center {

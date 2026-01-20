@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import ProductCard from '../components/gadget/ProductCard';
 import CartDrawer from '../components/gadget/CartDrawer';
 import { FaGamepad, FaLaptop, FaTv, FaUsb, FaCamera, FaHeadphones } from 'react-icons/fa';
@@ -19,6 +19,7 @@ const GadgetPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   const resultsRef = useRef(null);
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useScrollToResults(resultsRef, appliedSearch);
   const debouncedSearch = useDebouncedValue(appliedSearch, 0);
@@ -28,11 +29,13 @@ const GadgetPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   const totalPrice = cart.reduce((sum, i) => sum + i.price * i.quantity, 0);
   const formatINR = (n) => `₹${n.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
-  const filtered = products.filter((p) => {
-    const matchesSearch = !debouncedSearch || includesMatch(p, debouncedSearch);
-    const matchesCat = !activeCat || p.categoryId === activeCat;
-    return matchesSearch && matchesCat;
-  });
+  const filtered = useMemo(() => {
+    return products.filter((p) => {
+      const matchesSearch = !debouncedSearch || includesMatch(p, debouncedSearch);
+      const matchesCat = !activeCat || p.categoryId === activeCat;
+      return matchesSearch && matchesCat;
+    });
+  }, [products, debouncedSearch, activeCat]);
 
   const iconMap = {
     Gamepad: FaGamepad,
@@ -51,12 +54,14 @@ const GadgetPage = ({ cart, updateCart, removeItem, onCheckout }) => {
 
   useEffect(() => {
     const load = async () => {
+      setLoading(true);
       const [cats, items] = await Promise.all([
         fetchCategories('gadget'),
         fetchProducts('gadget'),
       ]);
       setCategories(cats);
       setProducts(items);
+      setLoading(false);
     };
     load();
   }, []);
@@ -126,17 +131,35 @@ const GadgetPage = ({ cart, updateCart, removeItem, onCheckout }) => {
               </button>
             </div>
             <div className="row g-4">
-              {filtered.map((p) => (
-                <div key={p.id} className="col-6 col-md-4 col-xl-3">
-                  <ProductCard
-                    product={p}
-                    qty={getQty(p.id)}
-                    onAdd={() => updateCart(p, 1)}
-                    onRemove={() => updateCart(p, -1)}
-                    onView={() => setSelectedProduct(p)}
-                  />
-                </div>
-              ))}
+              {loading
+                ? Array.from({ length: 8 }).map((_, idx) => (
+                    <div key={`sk-${idx}`} className="col-6 col-md-4 col-xl-3">
+                      <div className="card product-card border-0 shadow-sm h-100 skeleton-card">
+                        <div className="p-4 text-center">
+                          <div className="skeleton skeleton-img"></div>
+                        </div>
+                        <div className="card-body pt-0 d-flex flex-column">
+                          <div className="skeleton skeleton-line" style={{ width: "100%" }}></div>
+                          <div className="skeleton skeleton-line" style={{ width: "70%" }}></div>
+                          <div className="mt-auto d-flex justify-content-between align-items-center">
+                            <div className="skeleton skeleton-price"></div>
+                            <div className="skeleton skeleton-btn"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                : filtered.map((p) => (
+                    <div key={p.id} className="col-6 col-md-4 col-xl-3">
+                      <ProductCard
+                        product={p}
+                        qty={getQty(p.id)}
+                        onAdd={() => updateCart(p, 1)}
+                        onRemove={() => updateCart(p, -1)}
+                        onView={() => setSelectedProduct(p)}
+                      />
+                    </div>
+                  ))}
             </div>
           </div>
         </div>

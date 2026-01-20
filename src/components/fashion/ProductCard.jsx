@@ -6,7 +6,7 @@ const ProductCard = ({ product, qty, onAdd, onRemove, onView }) => (
   <div className="card product-card border-0 shadow-sm h-100" onClick={onView}>
     {product.discount && <div className="discount-tag">{product.discount}</div>}
     <div className="p-4 text-center">
-      <img src={product.img || product.image || 'https://placehold.co/300x200?text=No+Image'} alt={product.name} className="img-fluid rounded" style={{ height: 140, width: '100%', objectFit: 'cover' }} />
+      <img src={product.img || product.image || 'https://placehold.co/300x200?text=No+Image'} alt={product.name} loading="lazy" className="img-fluid rounded" style={{ height: 140, width: '100%', objectFit: 'cover' }} />
     </div>
     <div className="card-body pt-0 d-flex flex-column">
       <h6 className="fw-bold mb-1" style={{ minHeight: '40px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{product.name}</h6>
@@ -28,4 +28,4 @@ const ProductCard = ({ product, qty, onAdd, onRemove, onView }) => (
     </div>
   </div>
 );
-export default ProductCard;
+export default React.memo(ProductCard);
