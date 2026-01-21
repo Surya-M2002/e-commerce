@@ -44,7 +44,7 @@ const CheckoutPage = ({ cartItems, onOrderPlaced }) => {
   };
 
   return (
-    <div className="bg-light min-vh-100 py-5 position-relative">
+    <div className="checkout-page bg-light min-vh-100 py-5 position-relative">
 
       {/* ✅ SUCCESS MODAL */}
       {showSuccess && (
@@ -107,7 +107,7 @@ const CheckoutPage = ({ cartItems, onOrderPlaced }) => {
                 {cartItems.map((item) => (
                   <div
                     key={item.id}
-                    className="d-flex justify-content-between align-items-center small mb-2"
+                    className="order-item d-flex justify-content-between align-items-center small mb-2"
                   >
                     <span className="d-flex align-items-center gap-2">
                       <img

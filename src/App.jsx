@@ -335,7 +335,14 @@ function App() {
               />
             }
           />
-          <Route path="/seller-dashboard" element={<SellerDashboard />} />
+          <Route
+            path="/seller-dashboard"
+            element={
+              user && user.role === 'seller'
+                ? <SellerDashboard />
+                : <LoginPage onLoginSuccess={(u) => { setUser(u); navigate('/'); }} />
+            }
+          />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/orders" element={<OrdersPage />} />
           <Route path="/offers" element={<OffersPage />} />

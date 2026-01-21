@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 const ROOT = path.resolve(process.cwd(), "..");
 app.use(
   "/static/products",
-  express.static(path.join(ROOT, "src", "images", "Daily needs"))
+  express.static(path.join(ROOT, "src", "images", "Daily needs")),
 );
 
 await connectDB();
@@ -129,6 +129,95 @@ app.get("/data", async (req, res) => {
   }
 });
 
+// Admin login (email/password), role must be 'admin'
+app.post("/admin/login", async (req, res) => {
+  try {
+    const { email, password } = req.body || {};
+    const emailOk = /^\S+@\S+\.\S+$/.test(String(email || ""));
+    if (!emailOk || String(password || "").length < 6) {
+      return res.status(400).json({ error: "Invalid credentials" });
+    }
+    const users = mongoose.connection.collection("users");
+    const user = await users.findOne({
+      email: String(email).toLowerCase(),
+      role: "admin",
+    });
+    if (!user)
+      return res.status(401).json({ error: "Invalid email or password" });
+    const bcrypt = (await import("bcryptjs")).default;
+    const ok = await bcrypt.compare(
+      String(password),
+      String(user.passwordHash || ""),
+    );
+    if (!ok)
+      return res.status(401).json({ error: "Invalid email or password" });
+    const jwt = (await import("jsonwebtoken")).default;
+    const token = jwt.sign(
+      {
+        id: String(user._id),
+        email: user.email,
+        name: user.name,
+        role: "admin",
+      },
+      env.JWT_SECRET || "DEV_SECRET",
+      { expiresIn: "7d" },
+    );
+    return res.json({
+      user: {
+        id: String(user._id),
+        name: user.name,
+        email: user.email,
+        role: "admin",
+      },
+      token,
+    });
+  } catch {
+    return res.status(500).json({ error: "Admin login failed" });
+  }
+});
+
+// Admin creates seller account
+app.post("/admin/sellers", async (req, res) => {
+  try {
+    const auth = req.headers.authorization || "";
+    const m = auth.match(/^Bearer\s+(.+)/i);
+    if (!m) return res.status(401).json({ error: "Unauthorized" });
+    const token = m[1];
+    const jwt = (await import("jsonwebtoken")).default;
+    const payload = jwt.verify(token, env.JWT_SECRET || "DEV_SECRET");
+    if (payload.role !== "admin")
+      return res.status(403).json({ error: "Forbidden" });
+    const { name, email, password } = req.body || {};
+    const emailOk = /^\S+@\S+\.\S+$/.test(String(email || ""));
+    if (!name || !emailOk || String(password || "").length < 6) {
+      return res.status(400).json({ error: "Invalid input" });
+    }
+    const users = mongoose.connection.collection("users");
+    const existing = await users.findOne({
+      email: String(email).toLowerCase(),
+    });
+    if (existing)
+      return res.status(400).json({ error: "Email already registered" });
+    const bcrypt = (await import("bcryptjs")).default;
+    const hash = await bcrypt.hash(String(password), 10);
+    const doc = {
+      name: String(name).trim(),
+      email: String(email).toLowerCase(),
+      passwordHash: hash,
+      role: "seller",
+      createdAt: new Date(),
+    };
+    const created = await users.insertOne(doc);
+    return res.json({
+      id: String(created.insertedId),
+      name: doc.name,
+      email: doc.email,
+      role: "seller",
+    });
+  } catch {
+    return res.status(500).json({ error: "Create seller failed" });
+  }
+});
 // OAuth: Google
 app.get("/auth/google", (req, res) => {
   const clientId = env.GOOGLE_CLIENT_ID;
@@ -165,17 +254,23 @@ app.get("/auth/google/callback", async (req, res) => {
     }
     const userRes = await fetch(
       "https://www.googleapis.com/oauth2/v2/userinfo",
-      { headers: { Authorization: `Bearer ${tokens.access_token}` } }
+      { headers: { Authorization: `Bearer ${tokens.access_token}` } },
     );
     const profile = await userRes.json();
     const jwt = (await import("jsonwebtoken")).default;
     const token = jwt.sign(
-      { id: profile.id, email: profile.email, name: profile.name },
+      {
+        id: profile.id,
+        email: profile.email,
+        name: profile.name,
+        role: "customer",
+      },
       env.JWT_SECRET || "DEV_SECRET",
-      { expiresIn: "7d" }
+      { expiresIn: "7d" },
     );
-    const dest = env.FRONTEND_URL || "http://localhost:5173";
-    const url = new URL(dest);
+    const base = env.FRONTEND_URL || "http://localhost:5173";
+    const url = new URL(base);
+    url.pathname = "/social-success";
     url.searchParams.set("token", token);
     url.searchParams.set("name", profile.name || "");
     url.searchParams.set("email", profile.email || "");
@@ -198,9 +293,229 @@ app.get("/users/me", async (req, res) => {
       id: payload.id,
       email: payload.email,
       name: payload.name,
+      role: payload.role || "customer",
     });
   } catch (e) {
     return res.status(401).json({ error: "Invalid token" });
+  }
+});
+
+// Email/password signup
+app.post("/auth/signup", async (req, res) => {
+  try {
+    const { name, email, password } = req.body || {};
+    const emailOk = /^\S+@\S+\.\S+$/.test(String(email || ""));
+    if (!name || !emailOk || String(password || "").length < 6) {
+      return res.status(400).json({ error: "Invalid input" });
+    }
+    const users = mongoose.connection.collection("users");
+    const existing = await users.findOne({
+      email: String(email).toLowerCase(),
+    });
+    if (existing)
+      return res.status(400).json({ error: "Email already registered" });
+    const bcrypt = (await import("bcryptjs")).default;
+    const hash = await bcrypt.hash(String(password), 10);
+    const doc = {
+      name: String(name).trim(),
+      email: String(email).toLowerCase(),
+      passwordHash: hash,
+      role: "customer",
+      createdAt: new Date(),
+    };
+    const created = await users.insertOne(doc);
+    const jwt = (await import("jsonwebtoken")).default;
+    const token = jwt.sign(
+      {
+        id: String(created.insertedId),
+        email: doc.email,
+        name: doc.name,
+        role: "customer",
+      },
+      env.JWT_SECRET || "DEV_SECRET",
+      { expiresIn: "7d" },
+    );
+    return res.json({
+      user: {
+        id: String(created.insertedId),
+        name: doc.name,
+        email: doc.email,
+        role: "customer",
+      },
+      token,
+    });
+  } catch {
+    return res.status(500).json({ error: "Signup failed" });
+  }
+});
+
+// Email/password login (for seller/admin/customer accounts)
+app.post("/auth/login", async (req, res) => {
+  try {
+    const { email, password } = req.body || {};
+    const emailOk = /^\S+@\S+\.\S+$/.test(String(email || ""));
+    if (!emailOk || String(password || "").length < 6) {
+      return res.status(400).json({ error: "Invalid credentials" });
+    }
+    const users = mongoose.connection.collection("users");
+    const user = await users.findOne({ email: String(email).toLowerCase() });
+    if (!user)
+      return res.status(401).json({ error: "Invalid email or password" });
+    const bcrypt = (await import("bcryptjs")).default;
+    const ok = await bcrypt.compare(
+      String(password),
+      String(user.passwordHash || ""),
+    );
+    if (!ok)
+      return res.status(401).json({ error: "Invalid email or password" });
+    const jwt = (await import("jsonwebtoken")).default;
+    const token = jwt.sign(
+      {
+        id: String(user._id),
+        email: user.email,
+        name: user.name,
+        role: user.role || "customer",
+      },
+      env.JWT_SECRET || "DEV_SECRET",
+      { expiresIn: "7d" },
+    );
+    return res.json({
+      user: {
+        id: String(user._id),
+        name: user.name,
+        email: user.email,
+        role: user.role || "customer",
+      },
+      token,
+    });
+  } catch {
+    return res.status(500).json({ error: "Login failed" });
+  }
+});
+
+// Admin login (email/password); bootstraps first admin if none exists
+app.post("/admin/login", async (req, res) => {
+  try {
+    const { email, password } = req.body || {};
+    const emailOk = /^\S+@\S+\.\S+$/.test(String(email || ""));
+    if (!emailOk || String(password || "").length < 6) {
+      return res.status(400).json({ error: "Invalid credentials" });
+    }
+    const users = mongoose.connection.collection("users");
+    let user = await users.findOne({
+      email: String(email).toLowerCase(),
+      role: "admin",
+    });
+    if (!user) {
+      const adminEmail = String(env.ADMIN_EMAIL || "").toLowerCase();
+      const adminPass = String(env.ADMIN_PASSWORD || "");
+      if (
+        adminEmail &&
+        adminPass &&
+        String(email).toLowerCase() === adminEmail
+      ) {
+        const bcrypt = (await import("bcryptjs")).default;
+        const hash = await bcrypt.hash(adminPass, 10);
+        const doc = {
+          name: "Admin",
+          email: adminEmail,
+          passwordHash: hash,
+          role: "admin",
+          createdAt: new Date(),
+        };
+        const created = await users.insertOne(doc);
+        user = { _id: created.insertedId, ...doc };
+      } else {
+        const adminsCount = await users.countDocuments({ role: "admin" });
+        if (adminsCount === 0) {
+          const bcrypt = (await import("bcryptjs")).default;
+          const hash = await bcrypt.hash(String(password), 10);
+          const doc = {
+            name: "Admin",
+            email: String(email).toLowerCase(),
+            passwordHash: hash,
+            role: "admin",
+            createdAt: new Date(),
+          };
+          const created = await users.insertOne(doc);
+          user = { _id: created.insertedId, ...doc };
+        } else {
+          return res.status(401).json({ error: "Invalid email or password" });
+        }
+      }
+    }
+    const bcrypt = (await import("bcryptjs")).default;
+    const ok = await bcrypt.compare(
+      String(password),
+      String(user.passwordHash || ""),
+    );
+    if (!ok)
+      return res.status(401).json({ error: "Invalid email or password" });
+    const jwt = (await import("jsonwebtoken")).default;
+    const token = jwt.sign(
+      {
+        id: String(user._id),
+        email: user.email,
+        name: user.name,
+        role: "admin",
+      },
+      env.JWT_SECRET || "DEV_SECRET",
+      { expiresIn: "7d" },
+    );
+    return res.json({
+      user: {
+        id: String(user._id),
+        name: user.name,
+        email: user.email,
+        role: "admin",
+      },
+      token,
+    });
+  } catch {
+    return res.status(500).json({ error: "Admin login failed" });
+  }
+});
+
+// Admin creates seller account
+app.post("/admin/sellers", async (req, res) => {
+  try {
+    const auth = req.headers.authorization || "";
+    const m = auth.match(/^Bearer\s+(.+)/i);
+    if (!m) return res.status(401).json({ error: "Unauthorized" });
+    const token = m[1];
+    const jwt = (await import("jsonwebtoken")).default;
+    const payload = jwt.verify(token, env.JWT_SECRET || "DEV_SECRET");
+    if (payload.role !== "admin")
+      return res.status(403).json({ error: "Forbidden" });
+    const { name, email, password } = req.body || {};
+    const emailOk = /^\S+@\S+\.\S+$/.test(String(email || ""));
+    if (!name || !emailOk || String(password || "").length < 6) {
+      return res.status(400).json({ error: "Invalid input" });
+    }
+    const users = mongoose.connection.collection("users");
+    const existing = await users.findOne({
+      email: String(email).toLowerCase(),
+    });
+    if (existing)
+      return res.status(400).json({ error: "Email already registered" });
+    const bcrypt = (await import("bcryptjs")).default;
+    const hash = await bcrypt.hash(String(password), 10);
+    const doc = {
+      name: String(name).trim(),
+      email: String(email).toLowerCase(),
+      passwordHash: hash,
+      role: "seller",
+      createdAt: new Date(),
+    };
+    const created = await users.insertOne(doc);
+    return res.json({
+      id: String(created.insertedId),
+      name: doc.name,
+      email: doc.email,
+      role: "seller",
+    });
+  } catch {
+    return res.status(500).json({ error: "Create seller failed" });
   }
 });
 
@@ -267,7 +582,7 @@ app.get("/products", async (req, res) => {
       } else if (dom) {
         cats = await Category.find({ domain: { $in: domainSet(dom) } }).lean();
         const invMap = new Map(
-          cats.map((c) => [slugForName(dom, c.name), String(c._id)])
+          cats.map((c) => [slugForName(dom, c.name), String(c._id)]),
         );
         const mapped = invMap.get(cid) || invMap.get(String(cid).toLowerCase());
         if (mapped) filter.categoryId = mapped;
@@ -291,7 +606,7 @@ app.get("/products", async (req, res) => {
             cats.map((c) => [
               String(c._id),
               slugForName(dom || c.domain, c.name),
-            ])
+            ]),
           )
         : null;
     const out = prods.map((p, idx) => ({
@@ -381,7 +696,7 @@ app.post("/products", async (req, res) => {
           domain: { $in: domainSet(domain) },
         }).lean();
         const inv = new Map(
-          cats.map((c) => [slugForName(domain, c.name), String(c._id)])
+          cats.map((c) => [slugForName(domain, c.name), String(c._id)]),
         );
         catObjectId = inv.get(cid) || null;
       }
@@ -413,7 +728,7 @@ app.put("/products/:id", async (req, res) => {
         domain: { $in: domainSet(update.domain) },
       }).lean();
       const inv = new Map(
-        cats.map((c) => [slugForName(update.domain, c.name), String(c._id)])
+        cats.map((c) => [slugForName(update.domain, c.name), String(c._id)]),
       );
       update.categoryId =
         inv.get(String(update.categoryId)) || update.categoryId;
@@ -439,7 +754,7 @@ app.patch("/products/:id", async (req, res) => {
         domain: { $in: domainSet(update.domain) },
       }).lean();
       const inv = new Map(
-        cats.map((c) => [slugForName(update.domain, c.name), String(c._id)])
+        cats.map((c) => [slugForName(update.domain, c.name), String(c._id)]),
       );
       update.categoryId =
         inv.get(String(update.categoryId)) || update.categoryId;

@@ -6,18 +6,18 @@ import {
   FaLock,
   FaEye,
   FaEyeSlash,
-  FaShoppingCart,
 } from "react-icons/fa";
 import API_URL from '../config';
 
 const LoginPage = ({ onLoginSuccess }) => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("customer@demo.com");
-  const [password, setPassword] = useState("demopass");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [info, setInfo] = useState("");
+  const [sellerMode, setSellerMode] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,20 +29,31 @@ const LoginPage = ({ onLoginSuccess }) => {
       return;
     }
     setLoading(true);
-  try {
-      const res = await fetch(`${API_URL}/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || 'Login failed');
+    try {
+      if (sellerMode) {
+        const res = await fetch(`${API_URL}/auth/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        });
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}));
+          throw new Error(data.error || 'Login failed');
+        }
+        const data = await res.json();
+        try { localStorage.setItem('pb_user', JSON.stringify(data.user)); } catch { void 0; }
+        try { localStorage.setItem('pb_token', data.token || ''); } catch { void 0; }
+        if (String(data.user?.role) === 'seller') {
+          onLoginSuccess(data.user);
+          // Navigate to seller dashboard via App onLoginSuccess flow
+          window.location.href = '/seller-dashboard';
+          return;
+        }
+        onLoginSuccess(data.user);
+        window.location.href = '/';
+      } else {
+        window.location.href = `${API_URL}/auth/google`;
       }
-      const data = await res.json();
-      try { localStorage.setItem('pb_user', JSON.stringify(data.user)); } catch { void 0; }
-      try { localStorage.setItem('pb_token', data.token || ''); } catch { void 0; }
-      onLoginSuccess(data.user);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -67,13 +78,6 @@ const LoginPage = ({ onLoginSuccess }) => {
     }
   };
 
-  const handleGuestCheckout = () => {
-    const guest = { name: "Guest", email: "guest@checkout.com" };
-    try { localStorage.setItem('pb_user', JSON.stringify(guest)); } catch { void 0; }
-    try { localStorage.removeItem('pb_token'); } catch { void 0; }
-    onLoginSuccess(guest);
-  };
-  
   const handleForgot = () => {
     setInfo(`Password reset link sent to ${email}`);
   };
@@ -182,15 +186,13 @@ const LoginPage = ({ onLoginSuccess }) => {
           {info && <div className="text-success small mt-2">{info}</div>}
         </form>
 
-          {/* Guest Checkout */}
-          <button
-            className="btn w-100 py-2 mt-3 text-white rounded-pill"
-            style={{ backgroundColor: "#c2185b" }}
-            onClick={handleGuestCheckout}
-          >
-            <FaShoppingCart className="me-2" />
-            Checkout as Guest
-          </button>
+          {/* Seller Login Toggle */}
+          <div className="form-check mt-3">
+            <input className="form-check-input" type="checkbox" id="sellerMode" checked={sellerMode} onChange={(e) => setSellerMode(e.target.checked)} />
+            <label className="form-check-label" htmlFor="sellerMode">
+              Seller login (use email & password)
+            </label>
+          </div>
 
           {/* Footer */}
           <div className="text-center mt-4">

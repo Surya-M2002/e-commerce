@@ -163,6 +163,70 @@ body {
 .cart-drawer {
   position: fixed;
   right: -450px;
+
+  /* Utilities */
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  /* Checkout - Mobile adjustments */
+  @media (max-width: 576px) {
+    .checkout-page .sticky-top {
+      position: static !important;
+      top: auto !important;
+    }
+    .checkout-page .order-item {
+      gap: 8px;
+    }
+    .checkout-page .row.g-4 {
+      --bs-gutter-x: 1rem;
+      --bs-gutter-y: 1rem;
+    }
+    .checkout-page .p-4 {
+      padding: 12px !important;
+    }
+    .checkout-page h5 {
+      font-size: 1rem;
+    }
+    .checkout-page .fs-5 {
+      font-size: 1rem !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .checkout-page .order-item img {
+      width: 28px !important;
+      height: 28px !important;
+    }
+    .checkout-page .order-item span:first-child {
+      min-width: 0;
+      flex: 1;
+    }
+    .checkout-page .order-item .fw-bold {
+      font-size: 0.95rem;
+    }
+    .checkout-page label.cursor-pointer {
+      align-items: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+  }
+
+  /* Seller Dashboard - Modal form alignment */
+  .seller-modal .form-control.rounded-pill,
+  .seller-modal .form-select.rounded-pill {
+    height: 42px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .seller-modal .row.g-3 > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+  }
+  .seller-modal .form-label {
+    margin-bottom: 6px;
+  }
+  right: -450px;
   top: 0;
   width: 420px;
   height: 100vh;

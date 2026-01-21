@@ -362,7 +362,7 @@ const SellerDashboard = () => {
             
             {showProductModal && (
               <div className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" style={{ background: "rgba(0,0,0,0.5)", zIndex: 2000 }}>
-                <div className="bg-white rounded-3 shadow p-3 p-md-4" style={{ maxWidth: 560, width: "100%" }}>
+                <div className="seller-modal bg-white rounded-3 shadow p-3 p-md-4" style={{ maxWidth: 560, width: "100%" }}>
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <h5 className="fw-bold mb-0">{editProduct ? "Edit Product" : "Add Product"}</h5>
                     <button className="btn btn-sm btn-outline-secondary rounded-pill px-3" onClick={() => setShowProductModal(false)}>Close</button>
