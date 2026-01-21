@@ -221,7 +221,13 @@ app.post("/admin/sellers", async (req, res) => {
 // OAuth: Google
 app.get("/auth/google", (req, res) => {
   const clientId = env.GOOGLE_CLIENT_ID;
-  const redirectUri = env.GOOGLE_CALLBACK_URL;
+  const protoRaw = req.headers["x-forwarded-proto"] || "https";
+  const proto = String(protoRaw).split(",")[0].trim() || "https";
+  const host = req.headers["x-forwarded-host"] || req.headers.host || "";
+  const redirectUri =
+    env.GOOGLE_CALLBACK_URL && env.GOOGLE_CALLBACK_URL.includes("://")
+      ? env.GOOGLE_CALLBACK_URL
+      : `${proto}://${host}/auth/google/callback`;
   const scope = encodeURIComponent("openid email profile");
   const url =
     `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}` +
@@ -234,11 +240,18 @@ app.get("/auth/google/callback", async (req, res) => {
   try {
     const code = req.query.code;
     if (!code) return res.status(400).json({ error: "Missing code" });
+    const protoRaw = req.headers["x-forwarded-proto"] || "https";
+    const proto = String(protoRaw).split(",")[0].trim() || "https";
+    const host = req.headers["x-forwarded-host"] || req.headers.host || "";
+    const redirectUri =
+      env.GOOGLE_CALLBACK_URL && env.GOOGLE_CALLBACK_URL.includes("://")
+        ? env.GOOGLE_CALLBACK_URL
+        : `${proto}://${host}/auth/google/callback`;
     const body = new URLSearchParams({
       code: String(code),
       client_id: env.GOOGLE_CLIENT_ID,
       client_secret: env.GOOGLE_CLIENT_SECRET,
-      redirect_uri: env.GOOGLE_CALLBACK_URL,
+      redirect_uri: redirectUri,
       grant_type: "authorization_code",
     });
     const tokenRes = await fetch("https://oauth2.googleapis.com/token", {
