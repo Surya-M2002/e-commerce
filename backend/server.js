@@ -31,6 +31,8 @@ app.use(
   "/static/products",
   express.static(path.join(ROOT, "src", "images", "Daily needs")),
 );
+// Serve local uploads for development (non-breaking for production)
+app.use("/uploads", express.static(path.resolve(process.cwd(), "uploads")));
 
 await connectDB();
 

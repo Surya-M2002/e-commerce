@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Backend for My Shop",
-  "main": "server.js",
+  "main": "src/index.js",
   "author": "User",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
-    "seed": "node ./seed/seedFromData.js"
-    ,"dev": "nodemon server.js"
+    "start": "node src/index.js",
+    "seed": "node ./seed/seedFromData.js",
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "compression": "^1.8.1",
