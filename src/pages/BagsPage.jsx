@@ -29,11 +29,11 @@ const BagsPage = ({ cart, updateCart, removeItem, onCheckout }) => {
   const filtered = products.filter((p) => (!appliedSearch || includesMatch(p, appliedSearch)) && (!activeCat || p.categoryId === activeCat));
 
   const iconMap = {
-    handbags: FaShoppingBag,
-    backpacks: FaHiking,
+    handbag: FaShoppingBag,
+    backpack: FaHiking,
     travel: FaSuitcase,
     laptop: FaBriefcase,
-    wallets: FaGem,
+    wallet: FaGem,
   };
 
   useEffect(() => {

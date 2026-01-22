@@ -340,7 +340,13 @@ function App() {
             element={
               user && user.role === 'seller'
                 ? <SellerDashboard />
-                : <LoginPage onLoginSuccess={(u) => { setUser(u); navigate('/'); }} />
+                : <LoginPage
+                    onLoginSuccess={(u) => {
+                      setUser(u);
+                      if (u && u.role === 'seller') navigate('/seller-dashboard');
+                      else navigate('/');
+                    }}
+                  />
             }
           />
           <Route path="/profile" element={<ProfilePage />} />

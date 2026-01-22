@@ -625,3 +625,56 @@ body {
 .cursor-pointer {
   cursor: pointer !important;
 }
+
+/* Checkout - Mobile alignment fixes (top-level, not nested) */
+@media (max-width: 576px) {
+  .checkout-page {
+    padding-top: 16px;
+  }
+  .checkout-page .container-xxl {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .checkout-page .sticky-top {
+    position: static !important;
+    top: auto !important;
+  }
+  .checkout-page .row.g-4 {
+    --bs-gutter-x: 0.75rem;
+    --bs-gutter-y: 0.75rem;
+  }
+  .checkout-page .p-4 {
+    padding: 14px !important;
+  }
+  .checkout-page h5 {
+    font-size: 1rem;
+  }
+  .checkout-page .fs-5 {
+    font-size: 1rem !important;
+  }
+  .checkout-page .bg-white {
+    margin-bottom: 12px;
+  }
+  .checkout-page .order-item {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .checkout-page .order-item img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .checkout-page .order-item span:first-child {
+    min-width: 0;
+    flex: 1;
+  }
+  .checkout-page .order-item .fw-bold {
+    font-size: 0.95rem;
+  }
+  .checkout-page label.cursor-pointer {
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}

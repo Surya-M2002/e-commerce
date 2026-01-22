@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   FaBars,
@@ -12,6 +12,14 @@ const MobileNavBar = () => {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
+  const isLoggedIn = useMemo(() => {
+    try {
+      const raw = localStorage.getItem("pb_user");
+      return !!raw;
+    } catch {
+      return false;
+    }
+  }, []);
 
   return (
     <nav className="pb-mobile-nav d-md-none">
@@ -44,8 +52,10 @@ const MobileNavBar = () => {
 
         {/* Profile / Login */}
         <Link
-          to="/login"
-          className={`pb-mobile-item ${isActive("/login") ? "active" : ""}`}
+          to={isLoggedIn ? "/profile" : "/login"}
+          className={`pb-mobile-item ${
+            isLoggedIn ? (isActive("/profile") ? "active" : "") : (isActive("/login") ? "active" : "")
+          }`}
         >
           <FaUser />
         </Link>
