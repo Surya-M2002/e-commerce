@@ -4,9 +4,9 @@ services:
     env: node
     plan: free
     region: oregon
-    rootDir: backend
+    rootDir: server
     buildCommand: npm install
-    startCommand: node server.js
+    startCommand: node src/index.js
     autoDeploy: true
     envVars:
       - key: MONGO_URI
