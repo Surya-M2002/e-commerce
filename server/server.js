@@ -346,6 +346,8 @@ app.put("/users/me", async (req, res) => {
     if (typeof req.body?.newsletter === "boolean")
       update.newsletter = req.body.newsletter;
     if (req.body?.name) update.name = String(req.body.name).trim();
+    if (req.body?.phone) update.phone = String(req.body.phone).trim();
+    if (req.body?.address) update.address = String(req.body.address).trim();
     const result = await users.findOneAndUpdate(
       { _id: new mongoose.Types.ObjectId(String(payload.id)) },
       { $set: update },
@@ -357,6 +359,8 @@ app.put("/users/me", async (req, res) => {
       email: doc.email || payload.email || "",
       name: doc.name || payload.name || "",
       role: doc.role || payload.role || "customer",
+      phone: doc.phone || "",
+      address: doc.address || "",
       addresses: Array.isArray(doc.addresses) ? doc.addresses : undefined,
       newsletter:
         typeof doc.newsletter === "boolean" ? doc.newsletter : undefined,

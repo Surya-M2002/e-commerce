@@ -9,7 +9,6 @@ try {
   const pid = import.meta.env.VITE_APPWRITE_PROJECT_ID;
   const pname = import.meta.env.VITE_APPWRITE_PROJECT_NAME;
   const endpoint = import.meta.env.VITE_APPWRITE_ENDPOINT;
-  // eslint-disable-next-line no-console
   console.log("Appwrite env", { VITE_APPWRITE_PROJECT_ID: pid, VITE_APPWRITE_PROJECT_NAME: pname, VITE_APPWRITE_ENDPOINT: endpoint });
 } catch { /* noop */ }
 
