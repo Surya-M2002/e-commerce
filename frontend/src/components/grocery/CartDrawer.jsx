@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { X, Plus, Minus } from "lucide-react";
+import { normalizeImageUrl } from "../../utils/apiClient";
 
 const CartDrawer = ({ isOpen, onClose, cart, onUpdate, onRemoveItem, total, onCheckout }) => {
   useEffect(() => {
@@ -41,7 +42,7 @@ const CartDrawer = ({ isOpen, onClose, cart, onUpdate, onRemoveItem, total, onCh
                     <Minus size={14} />
                   </button>
                 </div>
-                <img src={item.img} alt={item.name} width="60" height="60" className="rounded" />
+                <img src={normalizeImageUrl(item.img || item.image)} alt={item.name} width="60" height="60" className="rounded" />
                 <div className="flex-grow-1">
                   <div className="fw-bold">{item.name}</div>
                   <div className="text-success fw-bold">{formatINR(item.price)}</div>

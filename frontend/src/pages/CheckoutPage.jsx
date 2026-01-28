@@ -23,6 +23,16 @@ const CheckoutPage = ({ cartItems, onOrderPlaced }) => {
     0
   );
   const formatINR = (n) => `₹${n.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  const normalizeImage = (u) => {
+    if (!u) return 'https://placehold.co/40x40?text=IMG';
+    const s = String(u);
+    if (s.startsWith('/')) return `${API_URL}${s}`;
+    if (/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?\//i.test(s)) {
+      const path = s.replace(/^https?:\/\/[^/]+/, '');
+      return `${API_URL}${path}`;
+    }
+    return s;
+  };
 
   useEffect(() => {
     const load = async () => {
@@ -232,7 +242,7 @@ const CheckoutPage = ({ cartItems, onOrderPlaced }) => {
                   >
                     <span className="d-flex align-items-center gap-2">
                       <img
-                        src={item.img || 'https://placehold.co/40x40?text=IMG'}
+                        src={normalizeImage(item.img || item.image)}
                         alt={item.name}
                         width={32}
                         height={32}

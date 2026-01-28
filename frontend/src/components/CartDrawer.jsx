@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { X, Plus, Minus } from "lucide-react";
+import { normalizeImageUrl } from "../utils/apiClient";
 
 const CartDrawer = ({
   isOpen,
@@ -64,7 +65,7 @@ const CartDrawer = ({
 
                 {/* Image */}
                 <img
-                  src={item.img}
+                  src={normalizeImageUrl(item.img || item.image)}
                   alt={item.name}
                   className="cart-img"
                 />

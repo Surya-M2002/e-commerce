@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { X, Plus, Minus } from "lucide-react";
+import { normalizeImageUrl } from "../../utils/apiClient";
 
 const CartDrawer = ({ isOpen, onClose, cart, onUpdate, onRemoveItem, total, onCheckout }) => {
   useEffect(() => {
@@ -42,7 +43,7 @@ const CartDrawer = ({ isOpen, onClose, cart, onUpdate, onRemoveItem, total, onCh
                   </button>
                 </div>
  
-                <img src={item.img} width="60" height="60" className="rounded" alt="" />
+                <img src={normalizeImageUrl(item.img || item.image)} width="60" height="60" className="rounded" alt={item.name} />
  
                 <div className="flex-grow-1">
                   <div className="d-flex align-items-center justify-content-between">

@@ -42,7 +42,7 @@ const CartDrawer = ({ isOpen, onClose, cart, onUpdate, onRemoveItem, total, onCh
                   </button>
                 </div>
  
-                <img src={item.img} width="60" height="60" className="rounded" alt="" />
+                <img src={item.img || item.image || 'https://placehold.co/60x60?text=IMG'} width="60" height="60" className="rounded" alt={item.name} />
  
                 <div className="flex-grow-1">
                   <div className="d-flex align-items-center justify-content-between">
