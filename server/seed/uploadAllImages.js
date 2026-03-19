@@ -8,7 +8,7 @@ const ROOT = path.resolve(cwd(), "..");
 dotenv.config({ path: path.join(ROOT, "server", ".env") });
 
 const OLD_SRC_IMAGES_DIR = path.join(ROOT, "src", "images");
-const NEW_SRC_IMAGES_DIR = path.join(ROOT, "frontend", "src", "images");
+const NEW_SRC_IMAGES_DIR = path.join(ROOT, "client", "src", "images");
 const SRC_IMAGES_DIR = existsSync(NEW_SRC_IMAGES_DIR)
   ? NEW_SRC_IMAGES_DIR
   : OLD_SRC_IMAGES_DIR;

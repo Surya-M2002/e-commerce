@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 
 const ROOT = path.resolve(process.cwd(), "..");
 const OLD_STATIC = path.join(ROOT, "src", "images", "Daily needs");
-const NEW_STATIC = path.join(ROOT, "frontend", "src", "images", "Daily needs");
+const NEW_STATIC = path.join(ROOT, "client", "src", "images", "Daily needs");
 const STATIC_DIR = existsSync(NEW_STATIC) ? NEW_STATIC : OLD_STATIC;
 app.use("/static/products", express.static(STATIC_DIR));
 // Serve local uploads for development (non-breaking for production)
