@@ -99,6 +99,9 @@ PORT=5000
 ## 📸 Screenshots
 
 <img width="1918" height="900" alt="Screenshot 2026-03-19 184712" src="https://github.com/user-attachments/assets/abca80d7-3e74-43ad-a343-da78cfa16e98" />
+<img width="1919" height="894" alt="Screenshot 2026-03-19 184810" src="https://github.com/user-attachments/assets/51c1251e-cdd2-4a81-970d-dfee419f1c01" />
+<img width="1919" height="899" alt="Screenshot 2026-03-19 185017" src="https://github.com/user-attachments/assets/7a92d19a-203c-4ec1-aaf1-b21e047244bc" />
+
 
 
 ---
