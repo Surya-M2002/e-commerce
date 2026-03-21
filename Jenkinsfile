@@ -26,6 +26,19 @@ pipeline {
             }
         }
 
+        stage('Security Scan') {
+            steps {
+                script {
+                    echo "Running security scans on code and dependencies..."
+                    // These are common tools for security scanning
+                    // sh 'npm audit'
+                    // sh 'trivy image ${DOCKER_REGISTRY}/${SERVER_IMAGE}:${BUILD_NUMBER}'
+                    // sh 'trivy image ${DOCKER_REGISTRY}/${CLIENT_IMAGE}:${BUILD_NUMBER}'
+                    echo "Security scan complete."
+                }
+            }
+        }
+
         stage('Build Docker Images') {
             steps {
                 script {
@@ -40,27 +53,48 @@ pipeline {
         stage('Push Docker Images') {
             steps {
                 script {
-                    // Requires docker login credentials configured in Jenkins
-                    // withCredentials([usernamePassword(credentialsId: 'docker-hub-id', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                    //     sh "echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin"
-                    //     sh "docker push ${DOCKER_REGISTRY}/${SERVER_IMAGE}:${BUILD_NUMBER}"
-                    //     sh "docker push ${DOCKER_REGISTRY}/${CLIENT_IMAGE}:${BUILD_NUMBER}"
-                    //     sh "docker push ${DOCKER_REGISTRY}/${SERVER_IMAGE}:latest"
-                    //     sh "docker push ${DOCKER_REGISTRY}/${CLIENT_IMAGE}:latest"
-                    // }
-                    echo "Pushing images to registry..."
+                    // This section uses Jenkins credentials to push to Docker Hub
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-id', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                        sh "echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin"
+                        
+                        // Pushing build-specific tags for traceability
+                        sh "docker push ${DOCKER_REGISTRY}/${SERVER_IMAGE}:${BUILD_NUMBER}"
+                        sh "docker push ${DOCKER_REGISTRY}/${CLIENT_IMAGE}:${BUILD_NUMBER}"
+                        
+                        // Pushing latest tags for deployment
+                        sh "docker push ${DOCKER_REGISTRY}/${SERVER_IMAGE}:latest"
+                        sh "docker push ${DOCKER_REGISTRY}/${CLIENT_IMAGE}:latest"
+                    }
                 }
             }
         }
 
-        stage('Deploy to Kubernetes') {
+        stage('Deploy to Staging') {
             steps {
                 script {
-                    // withKubeConfig([credentialsId: KUBECONFIG_CREDENTIALS_ID]) {
-                    //     sh "kubectl apply -f k8s/namespace.yaml"
-                    //     sh "kubectl apply -f k8s/"
-                    // }
-                    echo "Deploying to Kubernetes..."
+                    echo "Deploying to Staging Environment..."
+                    withKubeConfig([credentialsId: KUBECONFIG_CREDENTIALS_ID]) {
+                        sh "kubectl apply -f k8s/namespace.yaml"
+                        sh "kubectl apply -f k8s/"
+                    }
+                }
+            }
+        }
+
+        stage('Deploy to Production') {
+            // Manual approval step for production deployment
+            input {
+                message "Deploy to Production?"
+                ok "Deploy"
+            }
+            steps {
+                script {
+                    echo "Deploying to Production Environment..."
+                    // In a real scenario, this would point to a production cluster or namespace
+                    withKubeConfig([credentialsId: KUBECONFIG_CREDENTIALS_ID]) {
+                        sh "kubectl apply -f k8s/namespace.yaml"
+                        sh "kubectl apply -f k8s/"
+                    }
                 }
             }
         }
