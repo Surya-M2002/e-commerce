@@ -9,6 +9,12 @@ A full-stack E-Commerce web application built using the MERN stack, featuring pr
 
 ---
 
+📸 Screenshots
+<img width="1918" height="900" alt="Screenshot 2026-03-19 184712" src="https://github.com/user-attachments/assets/4eaee680-2fc7-4985-b8d5-b743e05d7af7" />
+<img width="1919" height="894" alt="Screenshot 2026-03-19 184810" src="https://github.com/user-attachments/assets/72efd006-67e3-4e6a-b749-8984410e5e98" />
+<img width="1919" height="899" alt="Screenshot 2026-03-19 185017" src="https://github.com/user-attachments/assets/0f4dc8cd-96cb-44a0-bffc-a9a262cd92be" />
+
+
 ## 📌 Features
 
 - 🔐 User Authentication (JWT-based login & signup)  
@@ -104,11 +110,6 @@ Create a .env file in the server folder and add:
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 PORT=5000
-
-📸 Screenshots
-<img width="1918" height="900" alt="Screenshot 2026-03-19 184712" src="https://github.com/user-attachments/assets/4eaee680-2fc7-4985-b8d5-b743e05d7af7" />
-<img width="1919" height="894" alt="Screenshot 2026-03-19 184810" src="https://github.com/user-attachments/assets/72efd006-67e3-4e6a-b749-8984410e5e98" />
-<img width="1919" height="899" alt="Screenshot 2026-03-19 185017" src="https://github.com/user-attachments/assets/0f4dc8cd-96cb-44a0-bffc-a9a262cd92be" />
 
 
 📈 Future Enhancements
