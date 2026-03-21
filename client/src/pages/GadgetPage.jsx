@@ -7,6 +7,7 @@ import PromoBanners from '../components/gadget/PromoBanners';
 import ProductModal from '../components/ProductModal';
 import useScrollToResults from '../hooks/useScrollToResults';
 import useDebouncedValue from '../hooks/useDebouncedValue';
+import LoadingOverlay from '../components/LoadingOverlay';
 import { includesMatch } from '../utils/search';
 import { fetchCategories, fetchProducts } from '../utils/apiClient';
 
@@ -68,6 +69,9 @@ const GadgetPage = ({ cart, updateCart, removeItem, onCheckout }) => {
 
   return (
     <div className="main-layout">
+      {loading && (
+        <LoadingOverlay message="Please wait, loading data from backend (free-tier cold start may take 30s)..." />
+      )}
       <div className="hero-section text-center py-5 border-bottom">
         <h1 className="fw-bold">Gadgets & Electronics</h1>
         <p className="text-muted">Latest gadgets curated for you</p>

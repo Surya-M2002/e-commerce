@@ -6,6 +6,7 @@ import { FaAppleAlt, FaUtensils, FaCoffee, FaDog, FaHome, FaTint, FaEgg, FaBread
 import ProductCard from "../components/grocery/ProductCard";
 import ProductModal from "../components/grocery/ProductModal";
 import CartDrawer from "../components/grocery/CartDrawer";
+import LoadingOverlay from "../components/LoadingOverlay";
 import "../App.css";
 import PromoBanners from "../components/grocery/PromoBanners";
 import CategoryBar from "../components/grocery/CategoryBar";
@@ -69,6 +70,9 @@ const Home = ({ cart, updateCart, removeItem, onCheckout, activeCategoryId, onSe
 
   return (
     <div className="main-layout">
+      {loading && (
+        <LoadingOverlay message="Please wait, loading data from backend (free-tier cold start may take 30s)..." />
+      )}
 
       {/* HERO */}
       <div className="hero-section text-center py-5 border-bottom">
