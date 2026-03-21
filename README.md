@@ -13,6 +13,7 @@ A full-stack E-Commerce web application built using the MERN stack, featuring pr
 💳 Order Placement functionality
 📦 Backend API for product & user management
 ⚡ Fast and responsive UI
+
 🛠️ Tech Stack
 Frontend
 React.js (Vite)
@@ -23,6 +24,8 @@ Node.js
 Express.js
 Database
 MongoDB
+
+
 DevOps & Deployment
 🐳 Docker
 🔄 Jenkins (CI/CD)
@@ -35,6 +38,8 @@ DevOps & Deployment
 ☸️ Deployed application on Kubernetes cluster for scalability and high availability
 📦 Built Docker images for both client and server
 🚀 Enabled continuous deployment workflow
+
+
 📂 Project Structure
 E-COMMERCE/
 │
@@ -45,6 +50,8 @@ E-COMMERCE/
 ├── render.yaml    # Deployment configuration
 ├── vite.config.js
 └── README.md
+
+
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
 git clone https://github.com/Surya-M2002/e-commerce.git
@@ -57,6 +64,8 @@ npm start
 cd client
 npm install
 npm run dev
+
+
 🐳 Docker Setup
 Build Docker Images
 docker build -t ecommerce-client ./client
@@ -64,6 +73,8 @@ docker build -t ecommerce-server ./server
 Run Containers
 docker run -d -p 3000:3000 ecommerce-client
 docker run -d -p 5000:5000 ecommerce-server
+
+
 ☸️ Kubernetes Deployment
 Managed container orchestration using Kubernetes
 Created deployment and service YAML files
@@ -82,6 +93,8 @@ JWT_SECRET=your_secret_key
 PORT=5000
 📸 Screenshots
 <img width="1918" height="900" alt="Screenshot 1" src="https://github.com/user-attachments/assets/abca80d7-3e74-43ad-a343-da78cfa16e98" /> <img width="1919" height="894" alt="Screenshot 2" src="https://github.com/user-attachments/assets/51c1251e-cdd2-4a81-970d-dfee419f1c01" /> <img width="1919" height="899" alt="Screenshot 3" src="https://github.com/user-attachments/assets/7a92d19a-203c-4ec1-aaf1-b21e047244bc" />
+
+
 📈 Future Enhancements
 💳 Payment Gateway Integration (Stripe/Razorpay)
 📦 Order Tracking System
